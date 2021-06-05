@@ -17,6 +17,10 @@ public class Patient {
     @Column(length = 11)
     private String pesel;
 
+    public long getId() {
+        return id;
+    }
+
     public String getFirstName() {
         return this.firstName;
     }

@@ -17,6 +17,10 @@ public class Doctor {
     @Column(length = 45)
     private String speciality;
 
+    public long getId() {
+        return id;
+    }
+
     public String getFirstName() {
         return this.firstName;
     }
