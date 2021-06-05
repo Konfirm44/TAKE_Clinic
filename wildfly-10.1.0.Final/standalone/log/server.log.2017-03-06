@@ -1,0 +1,429 @@
+2017-03-06 08:28:57,778 INFO  [org.jboss.modules] (main) JBoss Modules version 1.5.2.Final
+2017-03-06 08:28:58,165 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
+2017-03-06 08:28:58,252 INFO  [org.jboss.as] (MSC service thread 1-6) WFLYSRV0049: WildFly Full 10.1.0.Final (WildFly Core 2.2.0.Final) starting
+2017-03-06 08:28:58,254 DEBUG [org.jboss.as.config] (MSC service thread 1-6) Configured system properties:
+	awt.toolkit = sun.awt.windows.WToolkit
+	file.encoding = Cp1250
+	file.encoding.pkg = sun.io
+	file.separator = \
+	java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
+	java.awt.printerjob = sun.awt.windows.WPrinterJob
+	java.class.path = c:\take\wildfly-10.1.0.Final\jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = c:\take\jdk\jre\lib\endorsed
+	java.ext.dirs = c:\take\jdk\jre\lib\ext;C:\Windows\Sun\Java\lib\ext
+	java.home = c:\take\jdk\jre
+	java.io.tmpdir = C:\Users\nospa\AppData\Local\Temp\
+	java.library.path = c:\take\jdk\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\MiKTeX 2.9\miktex\bin\x64\;C:\Users\nospa\AppData\Local\Microsoft\WindowsApps;;.
+	java.net.preferIPv4Stack = true
+	java.runtime.name = Java(TM) SE Runtime Environment
+	java.runtime.version = 1.8.0_73-b02
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_73
+	java.vm.info = mixed mode
+	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.73-b02
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.home.dir = c:\take\wildfly-10.1.0.Final
+	jboss.host.name = desktop-t1hgrno
+	jboss.modules.dir = c:\take\wildfly-10.1.0.Final\modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = desktop-t1hgrno
+	jboss.qualified.host.name = desktop-t1hgrno
+	jboss.server.base.dir = c:\take\wildfly-10.1.0.Final\standalone
+	jboss.server.config.dir = c:\take\wildfly-10.1.0.Final\standalone\configuration
+	jboss.server.data.dir = c:\take\wildfly-10.1.0.Final\standalone\data
+	jboss.server.deploy.dir = c:\take\wildfly-10.1.0.Final\standalone\data\content
+	jboss.server.log.dir = c:\take\wildfly-10.1.0.Final\standalone\log
+	jboss.server.name = desktop-t1hgrno
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = c:\take\wildfly-10.1.0.Final\standalone\tmp
+	line.separator = 
+
+	logging.configuration = file:c:\take\wildfly-10.1.0.Final\standalone\configuration/logging.properties
+	module.path = c:\take\wildfly-10.1.0.Final\modules
+	org.jboss.boot.log.file = c:\take\wildfly-10.1.0.Final\standalone\log\server.log
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Windows 10
+	os.version = 10.0
+	path.separator = ;
+	program.name = standalone.bat
+	sun.arch.data.model = 64
+	sun.boot.class.path = c:\take\jdk\jre\lib\resources.jar;c:\take\jdk\jre\lib\rt.jar;c:\take\jdk\jre\lib\sunrsasign.jar;c:\take\jdk\jre\lib\jsse.jar;c:\take\jdk\jre\lib\jce.jar;c:\take\jdk\jre\lib\charsets.jar;c:\take\jdk\jre\lib\jfr.jar;c:\take\jdk\jre\classes
+	sun.boot.library.path = c:\take\jdk\jre\bin
+	sun.cpu.endian = little
+	sun.cpu.isalist = amd64
+	sun.desktop = windows
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = c:\take\wildfly-10.1.0.Final\jboss-modules.jar -mp c:\take\wildfly-10.1.0.Final\modules org.jboss.as.standalone -Djboss.home.dir=c:\take\wildfly-10.1.0.Final
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = Cp1250
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = 
+	sun.stderr.encoding = cp852
+	sun.stdout.encoding = cp852
+	user.country = PL
+	user.dir = c:\take
+	user.home = C:\Users\nospa
+	user.language = pl
+	user.name = nospa
+	user.script = 
+	user.timezone = Europe/Belgrade
+	user.variant = 
+2017-03-06 08:28:58,255 DEBUG [org.jboss.as.config] (MSC service thread 1-6) VM Arguments: -Dprogram.name=standalone.bat -Xms64M -Xmx512M -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Dorg.jboss.boot.log.file=c:\take\wildfly-10.1.0.Final\standalone\log\server.log -Dlogging.configuration=file:c:\take\wildfly-10.1.0.Final\standalone\configuration/logging.properties 
+2017-03-06 08:29:00,395 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2017-03-06 08:29:00,415 INFO  [org.xnio] (MSC service thread 1-1) XNIO version 3.4.0.Final
+2017-03-06 08:29:00,422 INFO  [org.xnio.nio] (MSC service thread 1-1) XNIO NIO Implementation Version 3.4.0.Final
+2017-03-06 08:29:00,454 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 38) WFLYCLINF0001: Activating Infinispan subsystem.
+2017-03-06 08:29:00,468 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 37) WFLYIO001: Worker 'default' has auto-configured to 8 core threads with 64 task threads based on your 4 available processors
+2017-03-06 08:29:00,487 INFO  [org.jboss.as.connector] (MSC service thread 1-5) WFLYJCA0009: Starting JCA Subsystem (WildFly/IronJacamar 1.3.4.Final)
+2017-03-06 08:29:00,490 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 56) WFLYWS0002: Activating WebServices Extension
+2017-03-06 08:29:00,495 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 54) WFLYTX0013: Node identifier property is set to the default value. Please make sure it is unique.
+2017-03-06 08:29:00,498 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 53) WFLYSEC0002: Activating Security Subsystem
+2017-03-06 08:29:00,514 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 44) WFLYJSF0007: Activated the following JSF Implementations: [main]
+2017-03-06 08:29:00,522 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 46) WFLYNAM0001: Activating Naming Subsystem
+2017-03-06 08:29:00,593 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0003: Undertow 1.4.0.Final starting
+2017-03-06 08:29:00,633 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 33) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+2017-03-06 08:29:00,667 INFO  [org.jboss.as.naming] (MSC service thread 1-6) WFLYNAM0003: Starting Naming Service
+2017-03-06 08:29:00,668 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-4) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+2017-03-06 08:29:00,669 INFO  [org.jboss.remoting] (MSC service thread 1-1) JBoss Remoting version 4.0.21.Final
+2017-03-06 08:29:00,680 INFO  [org.jboss.as.security] (MSC service thread 1-2) WFLYSEC0001: Current PicketBox version=4.9.6.Final
+2017-03-06 08:29:00,737 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 55) WFLYUT0014: Creating file handler for path 'c:\take\wildfly-10.1.0.Final/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+2017-03-06 08:29:01,144 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) WFLYJCA0018: Started Driver service with driver-name = h2
+2017-03-06 08:29:01,248 INFO  [org.jboss.as.ejb3] (MSC service thread 1-6) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 16 (per class), which is derived from the number of CPUs on this host.
+2017-03-06 08:29:01,246 INFO  [org.jboss.as.ejb3] (MSC service thread 1-5) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 64 (per class), which is derived from thread worker pool sizing.
+2017-03-06 08:29:01,259 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0012: Started server default-server.
+2017-03-06 08:29:01,284 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0018: Host default-host starting
+2017-03-06 08:29:01,580 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-5) WFLYDM0111: Keystore c:\take\wildfly-10.1.0.Final\standalone\configuration\application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
+2017-03-06 08:29:01,600 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-4) WFLYDS0013: Started FileSystemDeploymentService for directory c:\take\wildfly-10.1.0.Final\standalone\deployments
+2017-03-06 08:29:01,602 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0027: Starting deployment of "take.war" (runtime-name: "take.war")
+2017-03-06 08:29:01,789 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8080
+2017-03-06 08:29:02,062 INFO  [org.infinispan.factories.GlobalComponentRegistry] (MSC service thread 1-3) ISPN000128: Infinispan version: Infinispan 'Chakra' 8.2.4.Final
+2017-03-06 08:29:02,135 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 60) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-03-06 08:29:02,135 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 63) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-03-06 08:29:02,141 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 59) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-03-06 08:29:02,156 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 63) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-03-06 08:29:02,161 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 60) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-03-06 08:29:02,162 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8443
+2017-03-06 08:29:02,166 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 59) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-03-06 08:29:02,167 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+2017-03-06 08:29:02,352 INFO  [org.jboss.ws.common.management] (MSC service thread 1-1) JBWS022052: Starting JBossWS 5.1.5.Final (Apache CXF 3.1.6) 
+2017-03-06 08:29:02,452 INFO  [org.jboss.as.jpa] (MSC service thread 1-1) WFLYJPA0002: Read persistence.xml for komis
+2017-03-06 08:29:02,728 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 59) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'take.war#komis'
+2017-03-06 08:29:02,753 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 59) HHH000204: Processing PersistenceUnitInfo [
+	name: komis
+	...]
+2017-03-06 08:29:02,798 INFO  [org.jboss.weld.deployer] (MSC service thread 1-5) WFLYWELD0003: Processing weld deployment take.war
+2017-03-06 08:29:02,866 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 59) HHH000412: Hibernate Core {5.0.10.Final}
+2017-03-06 08:29:02,870 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 59) HHH000206: hibernate.properties not found
+2017-03-06 08:29:02,872 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 59) HHH000021: Bytecode provider name : javassist
+2017-03-06 08:29:02,911 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-5) HV000001: Hibernate Validator 5.2.4.Final
+2017-03-06 08:29:02,936 INFO  [org.hibernate.annotations.common.Version] (ServerService Thread Pool -- 59) HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-03-06 08:29:03,032 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-5) WFLYEJB0473: JNDI bindings for session bean named 'KomisEJB' in deployment unit 'deployment "take.war"' are as follows:
+
+	java:global/take/KomisEJB!pl.kurs.komis.KomisEJB
+	java:app/take/KomisEJB!pl.kurs.komis.KomisEJB
+	java:module/KomisEJB!pl.kurs.komis.KomisEJB
+	java:global/take/KomisEJB
+	java:app/take/KomisEJB
+	java:module/KomisEJB
+
+2017-03-06 08:29:03,035 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-5) WFLYEJB0473: JNDI bindings for session bean named 'KredytEJB' in deployment unit 'deployment "take.war"' are as follows:
+
+	java:global/take/KredytEJB!pl.kurs.kredyt.KredytEJB
+	java:app/take/KredytEJB!pl.kurs.kredyt.KredytEJB
+	java:module/KredytEJB!pl.kurs.kredyt.KredytEJB
+	java:global/take/KredytEJB
+	java:app/take/KredytEJB
+	java:module/KredytEJB
+
+2017-03-06 08:29:03,254 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 59) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-03-06 08:29:03,256 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 59) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-03-06 08:29:03,322 INFO  [org.jboss.weld.Version] (MSC service thread 1-5) WELD-000900: 2.3.5 (Final)
+2017-03-06 08:29:03,602 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 59) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'take.war#komis'
+2017-03-06 08:29:03,657 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 60) WFLYCLINF0002: Started client-mappings cache from ejb container
+2017-03-06 08:29:03,855 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 59) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-03-06 08:29:03,862 WARN  [org.hibernate.dialect.H2Dialect] (ServerService Thread Pool -- 59) HHH000431: Unable to determine H2 database version, certain features may not work
+2017-03-06 08:29:03,905 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 59) Envers integration enabled? : true
+2017-03-06 08:29:04,347 INFO  [org.hibernate.tool.hbm2ddl.SchemaUpdate] (ServerService Thread Pool -- 59) HHH000228: Running hbm2ddl schema update
+2017-03-06 08:29:04,365 INFO  [org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl] (ServerService Thread Pool -- 59) HHH000262: Table not found: Car
+2017-03-06 08:29:04,366 INFO  [org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl] (ServerService Thread Pool -- 59) HHH000262: Table not found: Car
+2017-03-06 08:29:05,171 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 59) WFLYUT0021: Registered web context: /take
+2017-03-06 08:29:05,201 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 34) WFLYSRV0010: Deployed "take.war" (runtime-name : "take.war")
+2017-03-06 08:29:05,344 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2017-03-06 08:29:05,345 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+2017-03-06 08:29:05,347 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 10.1.0.Final (WildFly Core 2.2.0.Final) started in 8096ms - Started 477 of 711 services (404 services are lazy, passive or on-demand)
+2017-03-06 08:38:27,300 INFO  [org.jboss.as.repository] (DeploymentScanner-threads - 1) WFLYDR0001: Content added at location c:\take\wildfly-10.1.0.Final\standalone\data\content\65\329ec60092f6187d2299f6d6b74454446d4465\content
+2017-03-06 08:38:27,321 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 69) WFLYUT0022: Unregistered web context: /take
+2017-03-06 08:38:27,363 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 72) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'take.war#komis'
+2017-03-06 08:38:27,374 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 72) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'take.war#komis'
+2017-03-06 08:38:27,396 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 72) WFLYCLINF0003: Stopped client-mappings cache from ejb container
+2017-03-06 08:38:27,417 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) WFLYSRV0028: Stopped deployment take.war (runtime-name: take.war) in 110ms
+2017-03-06 08:38:27,419 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0027: Starting deployment of "take.war" (runtime-name: "take.war")
+2017-03-06 08:38:27,475 INFO  [org.jboss.as.jpa] (MSC service thread 1-7) WFLYJPA0002: Read persistence.xml for komis
+2017-03-06 08:38:27,503 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 72) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'take.war#komis'
+2017-03-06 08:38:27,503 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 72) HHH000204: Processing PersistenceUnitInfo [
+	name: komis
+	...]
+2017-03-06 08:38:27,512 INFO  [org.jboss.weld.deployer] (MSC service thread 1-7) WFLYWELD0003: Processing weld deployment take.war
+2017-03-06 08:38:27,523 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'KomisEJB' in deployment unit 'deployment "take.war"' are as follows:
+
+	java:global/take/KomisEJB!pl.kurs.komis.KomisEJB
+	java:app/take/KomisEJB!pl.kurs.komis.KomisEJB
+	java:module/KomisEJB!pl.kurs.komis.KomisEJB
+	java:global/take/KomisEJB
+	java:app/take/KomisEJB
+	java:module/KomisEJB
+
+2017-03-06 08:38:27,525 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'KredytEJB' in deployment unit 'deployment "take.war"' are as follows:
+
+	java:global/take/KredytEJB!pl.kurs.kredyt.KredytEJB
+	java:app/take/KredytEJB!pl.kurs.kredyt.KredytEJB
+	java:module/KredytEJB!pl.kurs.kredyt.KredytEJB
+	java:global/take/KredytEJB
+	java:app/take/KredytEJB
+	java:module/KredytEJB
+
+2017-03-06 08:38:27,593 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 72) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-03-06 08:38:27,597 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 72) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-03-06 08:38:27,615 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 74) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'take.war#komis'
+2017-03-06 08:38:27,620 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 74) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-03-06 08:38:27,621 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 72) WFLYCLINF0002: Started client-mappings cache from ejb container
+2017-03-06 08:38:27,622 WARN  [org.hibernate.dialect.H2Dialect] (ServerService Thread Pool -- 74) HHH000431: Unable to determine H2 database version, certain features may not work
+2017-03-06 08:38:27,633 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 74) Envers integration enabled? : true
+2017-03-06 08:38:27,658 INFO  [org.hibernate.tool.hbm2ddl.SchemaUpdate] (ServerService Thread Pool -- 74) HHH000228: Running hbm2ddl schema update
+2017-03-06 08:38:27,882 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 73) WFLYUT0021: Registered web context: /take
+2017-03-06 08:38:27,934 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) WFLYSRV0016: Replaced deployment "take.war" with deployment "take.war"
+2017-03-06 08:38:27,937 INFO  [org.jboss.as.repository] (DeploymentScanner-threads - 1) WFLYDR0002: Content removed from location c:\take\wildfly-10.1.0.Final\standalone\data\content\4a\cc2110c93b90c0144f111589daf6b2f3e6ae6c\content
+2017-03-06 08:39:13,067 INFO  [org.jboss.as.repository] (DeploymentScanner-threads - 2) WFLYDR0001: Content added at location c:\take\wildfly-10.1.0.Final\standalone\data\content\11\1c021d1e14f8192b61a05e81981c02a9718bb1\content
+2017-03-06 08:39:13,072 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 76) WFLYUT0022: Unregistered web context: /take
+2017-03-06 08:39:13,095 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 81) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'take.war#komis'
+2017-03-06 08:39:13,097 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 81) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'take.war#komis'
+2017-03-06 08:39:13,105 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 81) WFLYCLINF0003: Stopped client-mappings cache from ejb container
+2017-03-06 08:39:13,118 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0028: Stopped deployment take.war (runtime-name: take.war) in 50ms
+2017-03-06 08:39:13,121 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) WFLYSRV0027: Starting deployment of "take.war" (runtime-name: "take.war")
+2017-03-06 08:39:13,171 INFO  [org.jboss.as.jpa] (MSC service thread 1-4) WFLYJPA0002: Read persistence.xml for komis
+2017-03-06 08:39:13,196 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 81) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'take.war#komis'
+2017-03-06 08:39:13,196 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 81) HHH000204: Processing PersistenceUnitInfo [
+	name: komis
+	...]
+2017-03-06 08:39:13,206 INFO  [org.jboss.weld.deployer] (MSC service thread 1-4) WFLYWELD0003: Processing weld deployment take.war
+2017-03-06 08:39:13,220 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-4) WFLYEJB0473: JNDI bindings for session bean named 'KomisEJB' in deployment unit 'deployment "take.war"' are as follows:
+
+	java:global/take/KomisEJB!pl.kurs.komis.KomisEJB
+	java:app/take/KomisEJB!pl.kurs.komis.KomisEJB
+	java:module/KomisEJB!pl.kurs.komis.KomisEJB
+	java:global/take/KomisEJB
+	java:app/take/KomisEJB
+	java:module/KomisEJB
+
+2017-03-06 08:39:13,263 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 81) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-03-06 08:39:13,263 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 81) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-03-06 08:39:13,281 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 81) WFLYCLINF0002: Started client-mappings cache from ejb container
+2017-03-06 08:39:13,289 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 81) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'take.war#komis'
+2017-03-06 08:39:13,292 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 81) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-03-06 08:39:13,293 WARN  [org.hibernate.dialect.H2Dialect] (ServerService Thread Pool -- 81) HHH000431: Unable to determine H2 database version, certain features may not work
+2017-03-06 08:39:13,301 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 81) Envers integration enabled? : true
+2017-03-06 08:39:13,325 INFO  [org.hibernate.tool.hbm2ddl.SchemaUpdate] (ServerService Thread Pool -- 81) HHH000228: Running hbm2ddl schema update
+2017-03-06 08:39:13,504 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 79) WFLYUT0021: Registered web context: /take
+2017-03-06 08:39:13,530 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) WFLYSRV0016: Replaced deployment "take.war" with deployment "take.war"
+2017-03-06 08:39:13,533 INFO  [org.jboss.as.repository] (DeploymentScanner-threads - 2) WFLYDR0002: Content removed from location c:\take\wildfly-10.1.0.Final\standalone\data\content\65\329ec60092f6187d2299f6d6b74454446d4465\content
+2017-03-06 08:39:43,613 INFO  [org.jboss.as.repository] (DeploymentScanner-threads - 2) WFLYDR0001: Content added at location c:\take\wildfly-10.1.0.Final\standalone\data\content\87\6efb424ab397df5cf74d818ae7b1908fb7d2d0\content
+2017-03-06 08:39:43,620 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 82) WFLYUT0022: Unregistered web context: /take
+2017-03-06 08:39:43,647 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 85) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'take.war#komis'
+2017-03-06 08:39:43,650 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 85) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'take.war#komis'
+2017-03-06 08:39:43,664 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 85) WFLYCLINF0003: Stopped client-mappings cache from ejb container
+2017-03-06 08:39:43,676 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0028: Stopped deployment take.war (runtime-name: take.war) in 60ms
+2017-03-06 08:39:43,678 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) WFLYSRV0027: Starting deployment of "take.war" (runtime-name: "take.war")
+2017-03-06 08:39:43,717 INFO  [org.jboss.as.jpa] (MSC service thread 1-6) WFLYJPA0002: Read persistence.xml for komis
+2017-03-06 08:39:43,740 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 85) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'take.war#komis'
+2017-03-06 08:39:43,741 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 85) HHH000204: Processing PersistenceUnitInfo [
+	name: komis
+	...]
+2017-03-06 08:39:43,749 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) WFLYWELD0003: Processing weld deployment take.war
+2017-03-06 08:39:43,763 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-3) WFLYEJB0473: JNDI bindings for session bean named 'KomisEJB' in deployment unit 'deployment "take.war"' are as follows:
+
+	java:global/take/KomisEJB!pl.kurs.komis.KomisEJB
+	java:app/take/KomisEJB!pl.kurs.komis.KomisEJB
+	java:module/KomisEJB!pl.kurs.komis.KomisEJB
+	java:global/take/KomisEJB
+	java:app/take/KomisEJB
+	java:module/KomisEJB
+
+2017-03-06 08:39:43,764 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-3) WFLYEJB0473: JNDI bindings for session bean named 'KredytEJB' in deployment unit 'deployment "take.war"' are as follows:
+
+	java:global/take/KredytEJB!pl.kurs.kredyt.KredytEJB
+	java:app/take/KredytEJB!pl.kurs.kredyt.KredytEJB
+	java:module/KredytEJB!pl.kurs.kredyt.KredytEJB
+	java:global/take/KredytEJB
+	java:app/take/KredytEJB
+	java:module/KredytEJB
+
+2017-03-06 08:39:43,816 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 85) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-03-06 08:39:43,817 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 85) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-03-06 08:39:43,840 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 85) WFLYCLINF0002: Started client-mappings cache from ejb container
+2017-03-06 08:39:43,844 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 86) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'take.war#komis'
+2017-03-06 08:39:43,848 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 86) HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-03-06 08:39:43,849 WARN  [org.hibernate.dialect.H2Dialect] (ServerService Thread Pool -- 86) HHH000431: Unable to determine H2 database version, certain features may not work
+2017-03-06 08:39:43,856 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 86) Envers integration enabled? : true
+2017-03-06 08:39:43,894 INFO  [org.hibernate.tool.hbm2ddl.SchemaUpdate] (ServerService Thread Pool -- 86) HHH000228: Running hbm2ddl schema update
+2017-03-06 08:39:44,117 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 86) WFLYUT0021: Registered web context: /take
+2017-03-06 08:39:44,139 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) WFLYSRV0016: Replaced deployment "take.war" with deployment "take.war"
+2017-03-06 08:39:44,142 INFO  [org.jboss.as.repository] (DeploymentScanner-threads - 2) WFLYDR0002: Content removed from location c:\take\wildfly-10.1.0.Final\standalone\data\content\11\1c021d1e14f8192b61a05e81981c02a9718bb1\content
+2017-03-06 08:58:36,519 INFO  [stdout] (default task-2) Tworzenie kredytu: 81779322
+2017-03-06 08:58:36,527 INFO  [stdout] (default task-2) Tworzenie kredytu: 1118351252
+2017-03-06 08:58:36,542 INFO  [stdout] (default task-2) setKwota: 1118351252
+2017-03-06 08:58:36,544 INFO  [stdout] (default task-2) getRata: 1118351252
+2017-03-06 08:58:48,433 INFO  [stdout] (default task-4) Tworzenie kredytu: 952013535
+2017-03-06 08:58:48,435 INFO  [stdout] (default task-4) Tworzenie kredytu: 913931192
+2017-03-06 08:58:48,437 INFO  [stdout] (default task-4) setKwota: 913931192
+2017-03-06 08:58:48,438 INFO  [stdout] (default task-4) getRata: 913931192
+2017-03-06 08:59:11,449 INFO  [stdout] (default task-5) Tworzenie kredytu: 572706443
+2017-03-06 08:59:11,451 INFO  [stdout] (default task-5) Tworzenie kredytu: 753218751
+2017-03-06 08:59:11,455 INFO  [stdout] (default task-5) setKwota: 753218751
+2017-03-06 08:59:11,457 INFO  [stdout] (default task-5) getRata: 753218751
+2017-03-06 08:59:16,161 INFO  [stdout] (default task-6) Tworzenie kredytu: 938966019
+2017-03-06 08:59:16,162 INFO  [stdout] (default task-6) Tworzenie kredytu: 959485069
+2017-03-06 08:59:16,164 INFO  [stdout] (default task-6) setKwota: 959485069
+2017-03-06 08:59:16,165 INFO  [stdout] (default task-6) getRata: 959485069
+2017-03-06 08:59:44,462 INFO  [stdout] (default task-13) Tworzenie kredytu: 716973113
+2017-03-06 08:59:44,463 INFO  [stdout] (default task-13) Tworzenie kredytu: 612093726
+2017-03-06 08:59:44,465 INFO  [stdout] (default task-13) setKwota: 612093726
+2017-03-06 08:59:44,466 INFO  [stdout] (default task-13) getRata: 612093726
+2017-03-06 09:01:11,763 INFO  [stdout] (default task-15) Tworzenie kredytu: 860775686
+2017-03-06 09:01:11,764 INFO  [stdout] (default task-15) Tworzenie kredytu: 1984752907
+2017-03-06 09:01:11,766 INFO  [stdout] (default task-15) setKwota: 1984752907
+2017-03-06 09:01:11,767 INFO  [stdout] (default task-15) getRata: 1984752907
+2017-03-06 10:12:28,574 INFO  [org.jboss.as.server] (Thread-2) WFLYSRV0220: Server shutdown has been requested via an OS signal
+2017-03-06 10:12:28,607 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 88) WFLYUT0022: Unregistered web context: /take
+2017-03-06 10:12:28,632 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0019: Host default-host stopping
+2017-03-06 10:12:28,646 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 92) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'take.war#komis'
+2017-03-06 10:12:28,654 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 89) WFLYCLINF0003: Stopped client-mappings cache from ejb container
+2017-03-06 10:12:28,659 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 92) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'take.war#komis'
+2017-03-06 10:12:28,662 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) WFLYJCA0010: Unbound data source [java:jboss/datasources/ExampleDS]
+2017-03-06 10:12:28,668 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) WFLYJCA0019: Stopped Driver service with driver-name = h2
+2017-03-06 10:12:28,675 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0008: Undertow HTTP listener default suspending
+2017-03-06 10:12:28,677 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0008: Undertow HTTPS listener https suspending
+2017-03-06 10:12:28,677 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 127.0.0.1:8080
+2017-03-06 10:12:28,679 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0007: Undertow HTTPS listener https stopped, was bound to 127.0.0.1:8443
+2017-03-06 10:12:28,684 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0004: Undertow 1.4.0.Final stopping
+2017-03-06 10:12:28,704 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0028: Stopped deployment take.war (runtime-name: take.war) in 119ms
+2017-03-06 10:12:28,710 INFO  [org.jboss.as] (MSC service thread 1-3) WFLYSRV0050: WildFly Full 10.1.0.Final (WildFly Core 2.2.0.Final) stopped in 105ms
+2017-03-06 10:12:35,250 INFO  [org.jboss.modules] (main) JBoss Modules version 1.5.2.Final
+2017-03-06 10:12:35,495 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
+2017-03-06 10:12:35,568 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: WildFly Full 10.1.0.Final (WildFly Core 2.2.0.Final) starting
+2017-03-06 10:12:35,569 DEBUG [org.jboss.as.config] (MSC service thread 1-7) Configured system properties:
+	awt.toolkit = sun.awt.windows.WToolkit
+	file.encoding = Cp1250
+	file.encoding.pkg = sun.io
+	file.separator = \
+	java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
+	java.awt.printerjob = sun.awt.windows.WPrinterJob
+	java.class.path = c:\take2\wildfly-10.1.0.Final\jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = c:\take2\jdk\jre\lib\endorsed
+	java.ext.dirs = c:\take2\jdk\jre\lib\ext;C:\Windows\Sun\Java\lib\ext
+	java.home = c:\take2\jdk\jre
+	java.io.tmpdir = C:\Users\nospa\AppData\Local\Temp\
+	java.library.path = c:\take2\jdk\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\MiKTeX 2.9\miktex\bin\x64\;C:\Users\nospa\AppData\Local\Microsoft\WindowsApps;;.
+	java.net.preferIPv4Stack = true
+	java.runtime.name = Java(TM) SE Runtime Environment
+	java.runtime.version = 1.8.0_73-b02
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_73
+	java.vm.info = mixed mode
+	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.73-b02
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.home.dir = c:\take2\wildfly-10.1.0.Final
+	jboss.host.name = desktop-t1hgrno
+	jboss.modules.dir = c:\take2\wildfly-10.1.0.Final\modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = desktop-t1hgrno
+	jboss.qualified.host.name = desktop-t1hgrno
+	jboss.server.base.dir = c:\take2\wildfly-10.1.0.Final\standalone
+	jboss.server.config.dir = c:\take2\wildfly-10.1.0.Final\standalone\configuration
+	jboss.server.data.dir = c:\take2\wildfly-10.1.0.Final\standalone\data
+	jboss.server.deploy.dir = c:\take2\wildfly-10.1.0.Final\standalone\data\content
+	jboss.server.log.dir = c:\take2\wildfly-10.1.0.Final\standalone\log
+	jboss.server.name = desktop-t1hgrno
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = c:\take2\wildfly-10.1.0.Final\standalone\tmp
+	line.separator = 
+
+	logging.configuration = file:c:\take2\wildfly-10.1.0.Final\standalone\configuration/logging.properties
+	module.path = c:\take2\wildfly-10.1.0.Final\modules
+	org.jboss.boot.log.file = c:\take2\wildfly-10.1.0.Final\standalone\log\server.log
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Windows 10
+	os.version = 10.0
+	path.separator = ;
+	program.name = standalone.bat
+	sun.arch.data.model = 64
+	sun.boot.class.path = c:\take2\jdk\jre\lib\resources.jar;c:\take2\jdk\jre\lib\rt.jar;c:\take2\jdk\jre\lib\sunrsasign.jar;c:\take2\jdk\jre\lib\jsse.jar;c:\take2\jdk\jre\lib\jce.jar;c:\take2\jdk\jre\lib\charsets.jar;c:\take2\jdk\jre\lib\jfr.jar;c:\take2\jdk\jre\classes
+	sun.boot.library.path = c:\take2\jdk\jre\bin
+	sun.cpu.endian = little
+	sun.cpu.isalist = amd64
+	sun.desktop = windows
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = c:\take2\wildfly-10.1.0.Final\jboss-modules.jar -mp c:\take2\wildfly-10.1.0.Final\modules org.jboss.as.standalone -Djboss.home.dir=c:\take2\wildfly-10.1.0.Final
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = Cp1250
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = 
+	sun.stderr.encoding = cp852
+	sun.stdout.encoding = cp852
+	user.country = PL
+	user.dir = c:\take2
+	user.home = C:\Users\nospa
+	user.language = pl
+	user.name = nospa
+	user.script = 
+	user.timezone = Europe/Belgrade
+	user.variant = 
+2017-03-06 10:12:35,570 DEBUG [org.jboss.as.config] (MSC service thread 1-7) VM Arguments: -Dprogram.name=standalone.bat -Xms64M -Xmx512M -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Dorg.jboss.boot.log.file=c:\take2\wildfly-10.1.0.Final\standalone\log\server.log -Dlogging.configuration=file:c:\take2\wildfly-10.1.0.Final\standalone\configuration/logging.properties 
+2017-03-06 10:12:37,368 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2017-03-06 10:12:37,386 INFO  [org.xnio] (MSC service thread 1-3) XNIO version 3.4.0.Final
+2017-03-06 10:12:37,393 INFO  [org.xnio.nio] (MSC service thread 1-3) XNIO NIO Implementation Version 3.4.0.Final
