@@ -10,25 +10,25 @@ public final class Visit {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
-	
+
 	@Column(columnDefinition="TIMESTAMP")
 	private LocalDateTime date;
-	
+
 	@Column(length=1023)
 	private String note;
-	
+
 	@Enumerated(EnumType.ORDINAL)
 	private VisitStatus status;
-	
+
 	@ManyToOne
 	private Patient patient;
-	
+
 	@ManyToOne
 	private Doctor doctor;
-	
+
 	@OneToMany(mappedBy="visit")
 	private List<Diagnosis> diagnoses;
-	
+
 	public Visit() {}
 
 	public long getId() {
