@@ -7,16 +7,16 @@ public final class Diagnosis {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
-	
+
 	@Column(length = 255)
 	private String note;
 
 	@ManyToOne
 	private Visit visit;
-	
+
 	@ManyToOne
 	private Disease disease;
-	
+
 	public Diagnosis() {}
 
 	public long getId() {
@@ -51,9 +51,3 @@ public final class Diagnosis {
 		this.disease = disease;
 	}
 }
-
-@Entity
-final class Patient {}
-
-@Entity
-final class Doctor {}
