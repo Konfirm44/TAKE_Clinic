@@ -1,5 +1,6 @@
 .idea/
 wildfly-10.1.0.Final/standalone/data/content
+wildfly-10.1.0.Final/standalone/*
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,macos,java
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,macos,java
