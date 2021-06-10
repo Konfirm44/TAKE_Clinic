@@ -3,7 +3,7 @@ package pl.take.clinic;
 import javax.persistence.*;
 
 @Entity
-public final class Diagnosis {
+public class Diagnosis {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;

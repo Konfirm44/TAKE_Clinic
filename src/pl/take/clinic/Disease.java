@@ -5,7 +5,7 @@ import java.util.List;
 import javax.persistence.*;
 
 @Entity
-public final class Disease {
+public class Disease {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;

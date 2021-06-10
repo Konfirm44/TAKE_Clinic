@@ -6,7 +6,7 @@ import java.util.List;
 import javax.persistence.*;
 
 @Entity
-public final class Visit {
+public class Visit {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
