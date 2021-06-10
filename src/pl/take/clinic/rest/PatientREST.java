@@ -1,0 +1,51 @@
+package pl.take.clinic.rest;
+
+import pl.take.clinic.ejb.PatientEJB;
+import pl.take.clinic.model.Patient;
+
+import javax.ejb.EJB;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+import java.util.List;
+
+@Path("/patient")
+@Consumes(MediaType.APPLICATION_JSON)
+@Produces(MediaType.APPLICATION_JSON)
+public class PatientREST {
+    @EJB
+    PatientEJB bean;
+
+    @POST
+    public String create(Patient patient) {
+        bean.create(patient);
+        return "patient created!";
+    }
+
+    @GET
+    @Path("/{id}")
+    public Patient find(@PathParam("id") long id) {
+        return bean.find(id);
+    }
+
+    @GET
+    public List<Patient> get() {
+        return bean.get();
+    }
+
+    @PUT
+    public String update(Patient patient) {
+        try {
+            bean.update(patient);
+            return "patient updated";
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "patient not updated";
+        }
+    }
+
+    @DELETE
+    @Path("/{id}")
+    public void delete(@PathParam("id") long id) {
+        bean.delete(id);
+    }
+}
