@@ -1,10 +1,10 @@
-package pl.take.clinic;
+package pl.take.clinic.model;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class Patient {
+public class Doctor {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
@@ -15,10 +15,10 @@ public class Patient {
     @Column(length = 45)
     private String lastName;
 
-    @Column(length = 11)
-    private String pesel;
+    @Column(length = 45)
+    private String speciality;
 
-    @OneToMany(mappedBy="patient")
+    @OneToMany(mappedBy="doctor")
     private List<Visit> visits;
 
     public long getId() {
@@ -41,12 +41,12 @@ public class Patient {
         this.lastName = value;
     }
 
-    public String getPesel() {
-        return this.pesel;
+    public String getSpeciality() {
+        return this.speciality;
     }
 
-    private void setPesel(String value) {
-        this.pesel = value;
+    private void setSpeciality(String value) {
+        this.speciality = value;
     }
 
     public List<Visit> getVisits() {
