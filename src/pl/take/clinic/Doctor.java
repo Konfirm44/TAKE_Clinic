@@ -1,6 +1,7 @@
 package pl.take.clinic;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Doctor {
@@ -16,6 +17,9 @@ public class Doctor {
 
     @Column(length = 45)
     private String speciality;
+
+    @OneToMany(mappedBy="doctor")
+    private List<Visit> visits;
 
     public long getId() {
         return id;
@@ -43,5 +47,13 @@ public class Doctor {
 
     private void setSpeciality(String value) {
         this.speciality = value;
+    }
+
+    public List<Visit> getVisits() {
+        return this.visits;
+    }
+
+    private void setVisits(List<Visit> value) {
+        this.visits = value;
     }
 }
