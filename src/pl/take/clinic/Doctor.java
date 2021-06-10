@@ -18,7 +18,6 @@ public class Doctor {
     @Column(length = 45)
     private String speciality;
 
-    @Column()
     private List<Visit> visits;
 
     public long getId() {
@@ -49,7 +48,7 @@ public class Doctor {
         this.speciality = value;
     }
 
-    public String getVisits() {
+    public List<Visit> getVisits() {
         return this.visits;
     }
 
