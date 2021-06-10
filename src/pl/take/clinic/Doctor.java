@@ -18,6 +18,7 @@ public class Doctor {
     @Column(length = 45)
     private String speciality;
 
+    @OneToMany(mappedBy="doctor")
     private List<Visit> visits;
 
     public long getId() {

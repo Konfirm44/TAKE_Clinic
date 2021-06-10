@@ -18,6 +18,7 @@ public class Patient {
     @Column(length = 11)
     private String pesel;
 
+    @OneToMany(mappedBy="patient")
     private List<Visit> visits;
 
     public long getId() {
