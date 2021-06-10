@@ -1,6 +1,6 @@
 package pl.take.clinic.model;
 
-import java.time.LocalDateTime;
+import java.util.Calendar;
 import java.util.List;
 
 import javax.persistence.*;
@@ -12,7 +12,7 @@ public class Visit {
 	private long id;
 	
 	@Column(columnDefinition="TIMESTAMP")
-	private LocalDateTime date;
+	private Calendar date;
 	
 	@Column(length=1023)
 	private String note;
@@ -39,11 +39,11 @@ public class Visit {
 		this.id = id;
 	}
 
-	public LocalDateTime getDate() {
+	public Calendar getDate() {
 		return date;
 	}
 
-	public void setDate(LocalDateTime date) {
+	public void setDate(Calendar date) {
 		this.date = date;
 	}
 
