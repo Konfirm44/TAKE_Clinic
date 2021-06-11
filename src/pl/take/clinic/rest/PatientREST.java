@@ -2,6 +2,7 @@ package pl.take.clinic.rest;
 
 import pl.take.clinic.ejb.PatientEJB;
 import pl.take.clinic.model.Patient;
+import pl.take.clinic.model.Visit;
 
 import javax.ejb.EJB;
 import javax.ws.rs.*;
@@ -25,6 +26,12 @@ public class PatientREST {
     @Path("/{id}")
     public Patient find(@PathParam("id") long id) {
         return bean.find(id);
+    }
+
+    @GET
+    @Path("/{id}/visits")
+    public List<Visit> getVisits(@PathParam("id") long id) {
+        return bean.getVisits(id);
     }
 
     @GET

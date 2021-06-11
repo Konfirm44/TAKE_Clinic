@@ -1,5 +1,8 @@
 package pl.take.clinic.model;
 
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -19,6 +22,7 @@ public class Patient {
     private String pesel;
 
     @OneToMany(mappedBy="patient")
+    @JsonIgnore
     private List<Visit> visits;
 
     public long getId() {

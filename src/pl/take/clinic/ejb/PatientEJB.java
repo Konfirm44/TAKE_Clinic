@@ -1,11 +1,13 @@
 package pl.take.clinic.ejb;
 
 import pl.take.clinic.model.Patient;
+import pl.take.clinic.model.Visit;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import java.util.ArrayList;
 import java.util.List;
 
 @Stateless
@@ -31,6 +33,10 @@ public class PatientEJB {
     public List<Patient> get() {
         return entityManager.createQuery("select p from Patient p", Patient.class)
                             .getResultList();
+    }
+
+    public List<Visit> getVisits(long id) {
+        return new ArrayList<>(find(id).getVisits());
     }
 
     public void update(Patient patient) {

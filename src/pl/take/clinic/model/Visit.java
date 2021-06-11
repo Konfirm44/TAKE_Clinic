@@ -1,5 +1,7 @@
 package pl.take.clinic.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.Calendar;
 import java.util.List;
 
@@ -21,12 +23,15 @@ public class Visit {
 	private VisitStatus status;
 	
 	@ManyToOne
+	@JsonIgnore
 	private Patient patient;
 	
 	@ManyToOne
+	@JsonIgnore
 	private Doctor doctor;
 	
 	@OneToMany(mappedBy="visit")
+	@JsonIgnore
 	private List<Diagnosis> diagnoses;
 	
 	public Visit() {}
