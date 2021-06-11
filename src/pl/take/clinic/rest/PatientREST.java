@@ -9,7 +9,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
-@Path("/patient")
+@Path("/patients")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class PatientREST {
@@ -35,8 +35,11 @@ public class PatientREST {
     }
 
     @GET
-    public List<Patient> get() {
-        return bean.get();
+    public List<Patient> get(@QueryParam("pesel") String pesel,
+                             @QueryParam("first_name") String firstName,
+                             @QueryParam("last_name") String lastName) {
+        System.err.println(pesel + " " + firstName + " " + lastName);
+        return bean.get(pesel, firstName, lastName);
     }
 
     @PUT

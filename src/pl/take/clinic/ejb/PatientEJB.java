@@ -20,19 +20,29 @@ public class PatientEJB {
         entityManager.persist(patient);
     }
 
-    public Patient findByPesel(String pesel) {
-        TypedQuery<Patient> q = entityManager.createQuery("select p from Patient p where p.pesel = :pesel", Patient.class);
-        q.setParameter("pesel", pesel);
-        return q.getSingleResult();
-    }
-
     public Patient find(long id) {
         return entityManager.find(Patient.class, id);
     }
 
-    public List<Patient> get() {
-        return entityManager.createQuery("select p from Patient p", Patient.class)
-                            .getResultList();
+    public List<Patient> get(String pesel, String firstName, String lastName) {
+        TypedQuery<Patient> query = entityManager.createQuery(
+                "select p from Patient p " +
+                        "where (:peselAvailable = false or p.pesel = :pesel) " +
+                        "and (:firstNameAvailable = false or p.firstName = :firstName) " +
+                        "and (:lastNameAvailable = false or p.lastName = :lastName)",
+                Patient.class
+        );
+
+        query.setParameter("peselAvailable", pesel != null);
+        query.setParameter("pesel", pesel);
+
+        query.setParameter("firstNameAvailable", firstName != null);
+        query.setParameter("firstName", firstName);
+
+        query.setParameter("lastNameAvailable", lastName != null);
+        query.setParameter("lastName", lastName);
+
+        return query.getResultList();
     }
 
     public List<Visit> getVisits(long id) {
