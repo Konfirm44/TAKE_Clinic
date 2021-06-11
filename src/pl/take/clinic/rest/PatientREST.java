@@ -52,10 +52,4 @@ public class PatientREST {
             return "patient not updated";
         }
     }
-
-    @DELETE
-    @Path("/{id}")
-    public void delete(@PathParam("id") long id) {
-        bean.delete(id);
-    }
 }

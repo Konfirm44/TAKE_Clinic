@@ -52,9 +52,4 @@ public class PatientEJB {
     public void update(Patient patient) {
         patient = entityManager.merge(patient);
     }
-
-    public void delete(long id) {
-        Patient patient = find(id);
-        entityManager.remove(patient);
-    }
 }
