@@ -12,28 +12,32 @@ import java.util.List;
 @Path("/patients")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class PatientREST {
+public class PatientREST implements PersonInformation<Patient> {
     @EJB
     PatientEJB bean;
 
+    @Override
     @POST
     public String create(Patient patient) {
         bean.create(patient);
         return "patient created!";
     }
 
+    @Override
     @GET
     @Path("/{id}")
     public Patient find(@PathParam("id") long id) {
         return bean.find(id);
     }
 
+    @Override
     @GET
     @Path("/{id}/visits")
     public List<Visit> getVisits(@PathParam("id") long id) {
         return bean.getVisits(id);
     }
 
+    @Override
     @GET
     public List<Patient> get(@QueryParam("pesel") String pesel,
                              @QueryParam("first_name") String firstName,
@@ -42,6 +46,7 @@ public class PatientREST {
         return bean.get(pesel, firstName, lastName);
     }
 
+    @Override
     @PUT
     public String update(Patient patient) {
         try {
