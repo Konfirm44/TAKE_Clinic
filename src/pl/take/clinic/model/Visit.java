@@ -20,7 +20,7 @@ public class Visit {
 	private String note;
 	
 	@Enumerated(EnumType.ORDINAL)
-	private VisitStatus status;
+	private VisitStatus status = VisitStatus.Registered;
 	
 	@ManyToOne
 	@JsonIgnore
