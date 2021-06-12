@@ -27,7 +27,26 @@ public class VisitsEJB {
         return entityManager.find(Visit.class, id);
     }
 
+    // INSERT INTO `clinic`.`visit` (`note`, `status`, `doctor_id`, `patient_id`) VALUES ('?', 0, 0, 0);
+
     public CreationStatus create(String note, VisitStatus status, Long doctorId, Long patientId) {
+        try {
+            String sqlQuery = "INSERT INTO visit (note, status, doctorId, patientId) VALUES (?, ?, ?, ?);";
+
+            int nativeQuery = entityManager.createNativeQuery(sqlQuery)
+                    .setParameter(1, note)
+                    .setParameter(2, status)
+                    .setParameter(3, doctorId)
+                    .setParameter(4, patientId)
+                    .executeUpdate();
+
+            if (nativeQuery == 1) {
+                return CreationStatus.Success;
+            }
+        } catch (Exception err) {
+            return CreationStatus.Failed;
+        }
+
         return CreationStatus.Failed;
     }
 

@@ -27,19 +27,24 @@ public class DiseaseEJB {
     }
 
     public CreationStatus create(String contagious, String name) {
-        Disease newDisease = new Disease();
-        if (contagious.length() != 1) {
+        // INSERT INTO `clinic`.`disease` (`contagious`, `name`) VALUES ('Test', 'Test\r\n');
+
+        try {
+            String sqlQuery = "INSERT INTO disease (contagious, name) VALUES (?, ?);";
+
+            int nativeQuery = entityManager.createNativeQuery(sqlQuery)
+                    .setParameter(1, contagious)
+                    .setParameter(2, name)
+                    .executeUpdate();
+
+            if (nativeQuery == 1) {
+                return CreationStatus.Success;
+            }
+        } catch (Exception err) {
             return CreationStatus.Failed;
         }
 
-        newDisease.setContagious(contagious.toCharArray()[0]);
-        newDisease.setName(name);
-
-        System.out.print(newDisease);
-
-        entityManager.persist(newDisease);
-
-        return CreationStatus.Success;
+        return CreationStatus.Failed;
     }
 
     public CreationStatus update(Integer id, String contagious, String name) {
