@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "37a67b7b-bff9-4d92-afd8-47b39202eaa5",
+		"name": "Diagnosis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/take/diagnosis",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"take",
+						"diagnosis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/take/diagnosis/create?note=&diseaseId=&visitId=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"take",
+						"diagnosis",
+						"create"
+					],
+					"query": [
+						{
+							"key": "note",
+							"value": ""
+						},
+						{
+							"key": "diseaseId",
+							"value": ""
+						},
+						{
+							"key": "visitId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
