@@ -1,7 +1,6 @@
 package pl.take.clinic.ejb;
 
 import pl.take.clinic.model.CreationStatus;
-import pl.take.clinic.model.Diagnosis;
 import pl.take.clinic.model.Disease;
 
 import javax.ejb.Stateless;
@@ -40,7 +39,7 @@ public class DiseaseEJB {
 
         entityManager.persist(newDisease);
 
-        return CreationStatus.Created;
+        return CreationStatus.Success;
     }
 
     public CreationStatus update(Integer id, String contagious, String name) {
@@ -60,5 +59,25 @@ public class DiseaseEJB {
         entityManager.persist(newDisease);
 
         return CreationStatus.Failed;
+    }
+
+    public CreationStatus createPersist(Disease disease) {
+        try {
+            entityManager.persist(disease);
+
+            return CreationStatus.Success;
+        } catch (Exception error) {
+            return CreationStatus.Failed;
+        }
+    }
+
+    public CreationStatus updateMerge(Disease disease) {
+        try {
+            entityManager.merge(disease);
+
+            return CreationStatus.Success;
+        } catch (Exception error) {
+            return CreationStatus.Failed;
+        }
     }
 }

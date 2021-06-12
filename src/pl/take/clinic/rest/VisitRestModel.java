@@ -20,8 +20,16 @@ public interface VisitRestModel {
     Visit getById (Long id);
 
     @POST
+    @Path("/")
+    CreationStatus createPersist(Visit visit);
+
+    @POST
     @Path("/create")
     CreationStatus create(String note, VisitStatus status, Long doctorId, Long patientId);
+
+    @PUT
+    @Path("/")
+    CreationStatus updateMerge(Visit visit);
 
     @PUT
     @Path("/update")

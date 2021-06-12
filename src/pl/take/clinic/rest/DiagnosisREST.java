@@ -6,7 +6,6 @@ import pl.take.clinic.model.Diagnosis;
 
 import javax.ejb.EJB;
 import javax.ws.rs.*;
-import java.awt.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
@@ -33,10 +32,25 @@ public class DiagnosisREST implements DiagnosisRestModel {
 
     @Override
     @POST
+    @Path("/")
+    public CreationStatus createPersist(Diagnosis diagnosis) {
+        return bean.createPersist(diagnosis);
+    }
+
+    @Override
+    @POST
     @Path("/create")
     public CreationStatus create(@QueryParam("note") String note, @QueryParam("diseaseId") Long diseaseId, @QueryParam("visitId") Long visitId) {
         return bean.create(note, diseaseId, visitId);
     }
+
+    @Override
+    @PUT
+    @Path("/")
+    public CreationStatus updateMerge(Diagnosis diagnosis) {
+        return bean.updateMerge(diagnosis);
+    }
+
 
     @Override
     @PUT

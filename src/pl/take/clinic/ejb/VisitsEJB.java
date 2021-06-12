@@ -34,4 +34,24 @@ public class VisitsEJB {
     public CreationStatus update(Long id, String note, VisitStatus status, Long doctorId, Long patientId) {
         return CreationStatus.Failed;
     }
+
+    public CreationStatus createPersist(Visit visit) {
+        try {
+            entityManager.persist(visit);
+
+            return CreationStatus.Success;
+        } catch (Exception error) {
+            return CreationStatus.Failed;
+        }
+    }
+
+    public CreationStatus updateMerge(Visit visit) {
+        try {
+            entityManager.merge(visit);
+
+            return CreationStatus.Success;
+        } catch (Exception error) {
+            return CreationStatus.Failed;
+        }
+    }
 }

@@ -19,8 +19,16 @@ public interface DiagnosisRestModel {
     Diagnosis getById (long id);
 
     @POST
+    @Path("/")
+    CreationStatus createPersist(Diagnosis diagnosis);
+
+    @POST
     @Path("/create")
     CreationStatus create(String note, Long diseaseId, Long visitId);
+
+    @PUT
+    @Path("/")
+    CreationStatus updateMerge(Diagnosis diagnosis);
 
     @PUT
     @Path("/update")

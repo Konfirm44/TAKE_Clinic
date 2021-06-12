@@ -33,6 +33,13 @@ public class VisitREST implements VisitRestModel {
 
     @Override
     @POST
+    @Path("/")
+    public CreationStatus createPersist(Visit visit) {
+        return bean.createPersist(visit);
+    }
+
+    @Override
+    @POST
     @Path("/create")
     public CreationStatus create(
             @QueryParam("note") String note,
@@ -41,6 +48,13 @@ public class VisitREST implements VisitRestModel {
             @QueryParam("patientId") Long patientId
     ) {
         return bean.create(note, status, doctorId, patientId);
+    }
+
+    @Override
+    @PUT
+    @Path("/")
+    public CreationStatus updateMerge(Visit visit) {
+        return bean.updateMerge(visit);
     }
 
     @Override

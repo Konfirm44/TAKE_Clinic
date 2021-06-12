@@ -32,9 +32,23 @@ public class DiseaseREST implements DiseaseRestModel {
 
     @Override
     @POST
+    @Path("/")
+    public CreationStatus createPersist(Disease disease) {
+        return bean.createPersist(disease);
+    }
+
+    @Override
+    @POST
     @Path("/create")
     public CreationStatus create(@QueryParam("contagious") String contagious, @QueryParam("name") String name) {
         return bean.create(contagious, name);
+    }
+
+    @Override
+    @PUT
+    @Path("/")
+    public CreationStatus updateMerge(Disease disease) {
+        return bean.updateMerge(disease);
     }
 
     @Override
