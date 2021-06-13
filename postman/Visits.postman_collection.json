@@ -58,7 +58,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/take/visits/create",
+					"raw": "http://localhost:8080/take/visits/create?note=&status=&doctorId=&patientId=",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -68,6 +68,28 @@
 						"take",
 						"visits",
 						"create"
+					],
+					"query": [
+						{
+							"key": "note",
+							"value": "",
+							"description": "String"
+						},
+						{
+							"key": "status",
+							"value": "",
+							"description": "0 - Registered, 1 - Canceled, 2 - Done"
+						},
+						{
+							"key": "doctorId",
+							"value": "",
+							"description": "Number"
+						},
+						{
+							"key": "patientId",
+							"value": "",
+							"description": "Number"
+						}
 					]
 				}
 			},
@@ -76,10 +98,10 @@
 		{
 			"name": "Update",
 			"request": {
-				"method": "GET",
+				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/take/visits/update?id",
+					"raw": "http://localhost:8080/take/visits/update/:id?note=&status=&doctorId=&patientId=",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -88,12 +110,31 @@
 					"path": [
 						"take",
 						"visits",
-						"update"
+						"update",
+						":id"
 					],
 					"query": [
 						{
+							"key": "note",
+							"value": ""
+						},
+						{
+							"key": "status",
+							"value": ""
+						},
+						{
+							"key": "doctorId",
+							"value": ""
+						},
+						{
+							"key": "patientId",
+							"value": ""
+						}
+					],
+					"variable": [
+						{
 							"key": "id",
-							"value": null
+							"value": ""
 						}
 					]
 				}

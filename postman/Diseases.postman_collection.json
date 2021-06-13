@@ -58,7 +58,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/take/diseases/create?contagious=&note=",
+					"raw": "http://localhost:8080/take/diseases/create?contagious=&name=",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -76,7 +76,7 @@
 							"description": "ONE CHAR!"
 						},
 						{
-							"key": "note",
+							"key": "name",
 							"value": "",
 							"description": "String"
 						}
@@ -91,7 +91,7 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/take/diseases/update?id=&contagious=&note=",
+					"raw": "http://localhost:8080/take/diseases/update/:id?contagious=&name=",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -100,23 +100,25 @@
 					"path": [
 						"take",
 						"diseases",
-						"update"
+						"update",
+						":id"
 					],
 					"query": [
-						{
-							"key": "id",
-							"value": "",
-							"description": "Number"
-						},
 						{
 							"key": "contagious",
 							"value": "",
 							"description": "ONE CHAR!"
 						},
 						{
-							"key": "note",
+							"key": "name",
 							"value": "",
 							"description": "String"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
 						}
 					]
 				}

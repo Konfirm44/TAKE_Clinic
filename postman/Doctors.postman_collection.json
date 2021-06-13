@@ -101,6 +101,44 @@
 			"response": []
 		},
 		{
+			"name": "Create w/ params",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/take/doctors/create?firstName=&lastName=&speciality=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"take",
+						"doctors",
+						"create"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "",
+							"description": "String"
+						},
+						{
+							"key": "lastName",
+							"value": "",
+							"description": "String"
+						},
+						{
+							"key": "speciality",
+							"value": "",
+							"description": "String "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Update",
 			"request": {
 				"method": "PUT",
@@ -115,6 +153,51 @@
 					"path": [
 						"take",
 						"doctors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update w/ params",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/take/doctors/update/:id?firstName=&lastName=&speciality=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"take",
+						"doctors",
+						"update",
+						":id"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "",
+							"description": "String"
+						},
+						{
+							"key": "lastName",
+							"value": "",
+							"description": "String"
+						},
+						{
+							"key": "speciality",
+							"value": "",
+							"description": "String "
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
 					]
 				}
 			},

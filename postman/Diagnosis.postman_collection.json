@@ -26,6 +26,33 @@
 			"response": []
 		},
 		{
+			"name": "Get by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/take/diagnosis/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"take",
+						"diagnosis",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Create",
 			"request": {
 				"method": "POST",
@@ -53,6 +80,48 @@
 						},
 						{
 							"key": "visitId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/take/diagnosis/update/:id?note=&diseaseId=&visitId=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"take",
+						"diagnosis",
+						"update",
+						":id"
+					],
+					"query": [
+						{
+							"key": "note",
+							"value": ""
+						},
+						{
+							"key": "diseaseId",
+							"value": ""
+						},
+						{
+							"key": "visitId",
+							"value": ""
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
 							"value": ""
 						}
 					]
