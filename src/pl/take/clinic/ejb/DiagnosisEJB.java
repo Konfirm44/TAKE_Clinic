@@ -6,7 +6,6 @@ import pl.take.clinic.model.Diagnosis;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
@@ -17,8 +16,6 @@ public class DiagnosisEJB {
 
     public List<Diagnosis> getAll() {
         TypedQuery<Diagnosis> query = entityManager.createQuery("select d from Diagnosis d", Diagnosis.class);
-
-        System.out.println("Listing diagnosis...");
 
         return query.getResultList();
     }
@@ -48,8 +45,22 @@ public class DiagnosisEJB {
     }
 
     public CreationStatus update(Long id, String note, Long diseaseId, Long visitId) {
-        Diagnosis newDiagnosis = new Diagnosis();
-        System.out.print(newDiagnosis);
+        try {
+            String sqlQuery = "UPDATE diagnosis SET note=?, disease_id=?, visit_id=? WHERE id=?;";
+
+            int nativeQuery = entityManager.createNativeQuery(sqlQuery)
+                    .setParameter(1, note)
+                    .setParameter(2, diseaseId)
+                    .setParameter(3, visitId)
+                    .setParameter(4, id)
+                    .executeUpdate();
+
+            if (nativeQuery == 1) {
+                return CreationStatus.Success;
+            }
+        } catch (Exception err) {
+            return CreationStatus.Failed;
+        }
 
         return CreationStatus.Failed;
     }

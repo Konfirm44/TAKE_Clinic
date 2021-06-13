@@ -54,8 +54,10 @@ public class DiagnosisREST implements DiagnosisRestModel {
 
     @Override
     @PUT
-    @Path("/update")
-    public CreationStatus update(@QueryParam("id") Long id, @QueryParam("note") String note, @QueryParam("diseaseId") Long diseaseId, @QueryParam("visitId") Long visitId) {
+    @Path("/update/{id}")
+    public CreationStatus update(@PathParam("id") Long id, @QueryParam("note") String note, @QueryParam("diseaseId") Long diseaseId, @QueryParam("visitId") Long visitId) {
+        System.out.println("Updating diagnosis endpoint reached...");
+
         return bean.update(id, note, diseaseId, visitId);
     }
 }

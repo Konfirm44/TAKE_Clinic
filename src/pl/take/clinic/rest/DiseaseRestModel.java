@@ -31,6 +31,6 @@ public interface DiseaseRestModel {
     CreationStatus updateMerge(Disease disease);
 
     @PUT
-    @Path("/update")
+    @Path("/update/{id}")
     CreationStatus update(Integer id, String contagious, String name);
 }

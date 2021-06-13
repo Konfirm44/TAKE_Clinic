@@ -31,6 +31,6 @@ public interface DiagnosisRestModel {
     CreationStatus updateMerge(Diagnosis diagnosis);
 
     @PUT
-    @Path("/update")
+    @Path("/update/{id}")
     CreationStatus update(Long id, String note, Long diseaseId, Long visitId);
 }

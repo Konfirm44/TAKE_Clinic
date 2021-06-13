@@ -53,8 +53,8 @@ public class DiseaseREST implements DiseaseRestModel {
 
     @Override
     @PUT
-    @Path("/update")
-    public CreationStatus update(@QueryParam("id") Integer id, @QueryParam("contagious") String contagious, @QueryParam("name") String name) {
+    @Path("/update/{id}")
+    public CreationStatus update(@PathParam("id") Integer id, @QueryParam("contagious") String contagious, @QueryParam("name") String name) {
         return bean.update(id, contagious, name);
     }
 }

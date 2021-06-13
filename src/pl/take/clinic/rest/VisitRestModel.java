@@ -32,6 +32,6 @@ public interface VisitRestModel {
     CreationStatus updateMerge(Visit visit);
 
     @PUT
-    @Path("/update")
-    CreationStatus update(Long id, String note, VisitStatus status, Long doctorId, Long patientId);
+    @Path("/update/{id}")
+    CreationStatus update(Long id, String note, Integer status, Long doctorId, Long patientId);
 }

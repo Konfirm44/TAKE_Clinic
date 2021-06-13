@@ -46,20 +46,21 @@ public class DiseaseEJB {
     }
 
     public CreationStatus update(Integer id, String contagious, String name) {
-        Disease newDisease = new Disease();
-        System.out.print(newDisease);
+        try {
+            String sqlQuery = "UPDATE Disease SET contagious=?, name=? WHERE id=?;";
 
-        if (contagious.length() != 1) {
+            int nativeQuery = entityManager.createNativeQuery(sqlQuery)
+                    .setParameter(1, contagious)
+                    .setParameter(2, name)
+                    .setParameter(3, id)
+                    .executeUpdate();
+
+            if (nativeQuery == 1) {
+                return CreationStatus.Success;
+            }
+        } catch (Exception err) {
             return CreationStatus.Failed;
         }
-
-        newDisease.setId(id);
-        newDisease.setContagious(contagious.toCharArray()[0]);
-        newDisease.setName(name);
-
-        System.out.print(newDisease);
-
-        entityManager.persist(newDisease);
 
         return CreationStatus.Failed;
     }

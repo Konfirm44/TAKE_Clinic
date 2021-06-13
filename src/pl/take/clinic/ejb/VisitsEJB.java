@@ -57,7 +57,25 @@ public class VisitsEJB {
         return CreationStatus.Failed;
     }
 
-    public CreationStatus update(Long id, String note, VisitStatus status, Long doctorId, Long patientId) {
+    public CreationStatus update(Long id, String note, Integer status, Long doctorId, Long patientId) {
+        try {
+            String sqlQuery = "UPDATE Visit SET note=?, status=?, doctor_id=?, patient_id=? WHERE id=?;";
+
+            int nativeQuery = entityManager.createNativeQuery(sqlQuery)
+                    .setParameter(1, note)
+                    .setParameter(2, status)
+                    .setParameter(3, doctorId)
+                    .setParameter(4, patientId)
+                    .setParameter(5, id)
+                    .executeUpdate();
+
+            if (nativeQuery == 1) {
+                return CreationStatus.Success;
+            }
+        } catch (Exception err) {
+            return CreationStatus.Failed;
+        }
+
         return CreationStatus.Failed;
     }
 

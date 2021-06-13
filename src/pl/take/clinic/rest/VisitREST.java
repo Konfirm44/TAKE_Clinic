@@ -65,11 +65,11 @@ public class VisitREST implements VisitRestModel {
 
     @Override
     @PUT
-    @Path("/update")
+    @Path("/update/{id}")
     public CreationStatus update(
             @QueryParam("id") Long id,
             @QueryParam("note") String note,
-            @QueryParam("status") VisitStatus status,
+            @QueryParam("status") Integer status,
             @QueryParam("doctorId") Long doctorId,
             @QueryParam("patientId") Long patientId
     ) {
