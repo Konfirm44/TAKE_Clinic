@@ -28,10 +28,13 @@ public class VisitsEJB {
     }
 
     // INSERT INTO `clinic`.`visit` (`note`, `status`, `doctor_id`, `patient_id`) VALUES ('?', 0, 0, 0);
+    // INSERT INTO `clinic`.`visit` (`note`, `status`, `doctor_id`, `patient_id`) VALUES ('NOTE', 0, 0, 0);
 
-    public CreationStatus create(String note, VisitStatus status, Long doctorId, Long patientId) {
+    public CreationStatus create(String note, Integer status, Long doctorId, Long patientId) {
+        System.out.println("Creating visit...");
+
         try {
-            String sqlQuery = "INSERT INTO visit (note, status, doctorId, patientId) VALUES (?, ?, ?, ?);";
+            String sqlQuery = "INSERT INTO Visit (note, status, doctor_id, patient_id) VALUES (?, ?, ?, ?);";
 
             int nativeQuery = entityManager.createNativeQuery(sqlQuery)
                     .setParameter(1, note)
@@ -40,10 +43,14 @@ public class VisitsEJB {
                     .setParameter(4, patientId)
                     .executeUpdate();
 
+            System.out.println("Creating visit native query response...");
+            System.out.println(nativeQuery);
+
             if (nativeQuery == 1) {
                 return CreationStatus.Success;
             }
         } catch (Exception err) {
+            System.out.println("Creating visit failed...");
             return CreationStatus.Failed;
         }
 

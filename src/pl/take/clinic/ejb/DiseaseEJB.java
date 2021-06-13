@@ -27,10 +27,8 @@ public class DiseaseEJB {
     }
 
     public CreationStatus create(String contagious, String name) {
-        // INSERT INTO `clinic`.`disease` (`contagious`, `name`) VALUES ('Test', 'Test\r\n');
-
         try {
-            String sqlQuery = "INSERT INTO disease (contagious, name) VALUES (?, ?);";
+            String sqlQuery = "INSERT INTO Disease (contagious, name) VALUES (?, ?);";
 
             int nativeQuery = entityManager.createNativeQuery(sqlQuery)
                     .setParameter(1, contagious)

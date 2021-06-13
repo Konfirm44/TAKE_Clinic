@@ -25,7 +25,7 @@ public interface VisitRestModel {
 
     @POST
     @Path("/create")
-    CreationStatus create(String note, VisitStatus status, Long doctorId, Long patientId);
+    CreationStatus create(String note, Integer status, Long doctorId, Long patientId);
 
     @PUT
     @Path("/")

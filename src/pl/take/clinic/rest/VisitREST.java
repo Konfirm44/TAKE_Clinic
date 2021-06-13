@@ -43,10 +43,16 @@ public class VisitREST implements VisitRestModel {
     @Path("/create")
     public CreationStatus create(
             @QueryParam("note") String note,
-            @QueryParam("status") VisitStatus status,
+            @QueryParam("status") Integer status,
             @QueryParam("doctorId") Long doctorId,
             @QueryParam("patientId") Long patientId
     ) {
+        System.out.println("Creating visit initialising...");
+        System.out.println(note);
+        System.out.println(status);
+        System.out.println(doctorId);
+        System.out.println(patientId);
+
         return bean.create(note, status, doctorId, patientId);
     }
 
