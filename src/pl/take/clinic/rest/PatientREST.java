@@ -1,6 +1,7 @@
 package pl.take.clinic.rest;
 
 import pl.take.clinic.ejb.PatientEJB;
+import pl.take.clinic.model.CreationStatus;
 import pl.take.clinic.model.Patient;
 import pl.take.clinic.model.Visit;
 
@@ -12,33 +13,13 @@ import java.util.List;
 @Path("/patients")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class PatientREST implements PersonInformation<Patient> {
+public class PatientREST implements PatientRestModel {
     @EJB
     PatientEJB bean;
 
     @Override
-    @POST
-    public String create(Patient patient) {
-        bean.create(patient);
-        return "patient created!";
-    }
-
-    @Override
     @GET
-    @Path("/{id}")
-    public Patient find(@PathParam("id") long id) {
-        return bean.find(id);
-    }
-
-    @Override
-    @GET
-    @Path("/{id}/visits")
-    public List<Visit> getVisits(@PathParam("id") long id) {
-        return bean.getVisits(id);
-    }
-
-    @Override
-    @GET
+    @Path("/")
     public List<Patient> get(@QueryParam("pesel") String pesel,
                              @QueryParam("first_name") String firstName,
                              @QueryParam("last_name") String lastName) {
@@ -47,14 +28,64 @@ public class PatientREST implements PersonInformation<Patient> {
     }
 
     @Override
-    @PUT
-    public String update(Patient patient) {
+    @GET
+    @Path("/{id}")
+    public Patient getById(@PathParam("id") Long id) {
+        return bean.find(id);
+    }
+
+    @Override
+    @GET
+    @Path("/{id}/visits")
+    public List<Visit> getVisits(@PathParam("id") Long id) {
+        return bean.getVisits(id);
+    }
+
+
+    @Override
+    @POST
+    @Path("/")
+    public CreationStatus createPersist(Patient patient) {
         try {
-            bean.update(patient);
-            return "patient updated";
+            bean.createPersist(patient);
+            return CreationStatus.Success;
         } catch (Exception e) {
-            e.printStackTrace();
-            return "patient not updated";
+            return CreationStatus.Failed;
         }
+    }
+
+    @Override
+    @POST
+    @Path("/create")
+    public CreationStatus create(
+            @QueryParam("firstName") String firstName,
+            @QueryParam("lastName") String lastName,
+            @QueryParam("pesel") String pesel
+    ) {
+        return bean.create(firstName, lastName, pesel);
+    }
+
+    @Override
+    @PUT
+    @Path("/")
+    public CreationStatus updateMerge(Patient patient) {
+        try {
+            bean.updateMerge(patient);
+            return CreationStatus.Success;
+        } catch (Exception e) {
+            return CreationStatus.Failed;
+        }
+    }
+
+    @Override
+    @PUT
+    @Path("/update/{id}")
+    public CreationStatus update(
+            @PathParam("id") Long id,
+            @QueryParam("firstName") String firstName,
+            @QueryParam("lastName") String lastName,
+            @QueryParam("pesel") String pesel
+    ) {
+        return bean.update(id, firstName, lastName, pesel);
     }
 }
