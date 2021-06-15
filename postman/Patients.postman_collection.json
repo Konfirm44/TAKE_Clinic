@@ -86,26 +86,6 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/take/patients",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"take",
-						"patients"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Create w/ params",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"url": {
 					"raw": "http://localhost:8080/take/patients/create?firstName=&lastName=&pesel=70021642826",
 					"protocol": "http",
 					"host": [
@@ -138,26 +118,6 @@
 		},
 		{
 			"name": "Update",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/take/patients",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"take",
-						"patients"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Update w/ params",
 			"request": {
 				"method": "PUT",
 				"header": [],

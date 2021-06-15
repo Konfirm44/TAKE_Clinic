@@ -19,11 +19,11 @@ public interface DiagnosisRestModel {
     Diagnosis getById (long id);
 
     @POST
-    @Path("/")
+    @Path("/object")
     CreationStatus createPersist(Diagnosis diagnosis);
 
     @POST
-    @Path("/create")
+    @Path("/")
     CreationStatus create(String note, Long diseaseId, Long visitId);
 
     @PUT
@@ -31,6 +31,6 @@ public interface DiagnosisRestModel {
     CreationStatus updateMerge(Diagnosis diagnosis);
 
     @PUT
-    @Path("/update/{id}")
+    @Path("/{id}")
     CreationStatus update(Long id, String note, Long diseaseId, Long visitId);
 }

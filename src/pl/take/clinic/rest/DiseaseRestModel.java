@@ -19,11 +19,11 @@ public interface DiseaseRestModel {
     Disease getById (Integer id);
 
     @POST
-    @Path("/")
+    @Path("/object")
     CreationStatus createPersist(Disease disease);
 
     @POST
-    @Path("/create")
+    @Path("/")
     CreationStatus create(String contagious, String name);
 
     @PUT
@@ -31,6 +31,6 @@ public interface DiseaseRestModel {
     CreationStatus updateMerge(Disease disease);
 
     @PUT
-    @Path("/update/{id}")
+    @Path("/{id}")
     CreationStatus update(Integer id, String contagious, String name);
 }

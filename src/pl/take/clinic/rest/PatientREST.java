@@ -44,7 +44,7 @@ public class PatientREST implements PatientRestModel {
 
     @Override
     @POST
-    @Path("/")
+    @Path("/object")
     public CreationStatus createPersist(Patient patient) {
         try {
             bean.createPersist(patient);
@@ -56,7 +56,7 @@ public class PatientREST implements PatientRestModel {
 
     @Override
     @POST
-    @Path("/create")
+    @Path("/")
     public CreationStatus create(
             @QueryParam("firstName") String firstName,
             @QueryParam("lastName") String lastName,
@@ -79,7 +79,7 @@ public class PatientREST implements PatientRestModel {
 
     @Override
     @PUT
-    @Path("/update/{id}")
+    @Path("/{id}")
     public CreationStatus update(
             @PathParam("id") Long id,
             @QueryParam("firstName") String firstName,

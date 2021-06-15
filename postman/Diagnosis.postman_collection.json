@@ -58,7 +58,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/take/diagnosis/create?note=&diseaseId=&visitId=",
+					"raw": "http://localhost:8080/take/diagnosis/?note=Lorem ipsum dolor sit amet&diseaseId=0&visitId=0",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -67,20 +67,20 @@
 					"path": [
 						"take",
 						"diagnosis",
-						"create"
+						""
 					],
 					"query": [
 						{
 							"key": "note",
-							"value": ""
+							"value": "Lorem ipsum dolor sit amet"
 						},
 						{
 							"key": "diseaseId",
-							"value": ""
+							"value": "0"
 						},
 						{
 							"key": "visitId",
-							"value": ""
+							"value": "0"
 						}
 					]
 				}
@@ -93,7 +93,7 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/take/diagnosis/update/:id?note=&diseaseId=&visitId=",
+					"raw": "http://localhost:8080/take/diagnosis/:id?note=Lorem ipsum dolor sit amet&diseaseId=0&visitId=0",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -102,27 +102,26 @@
 					"path": [
 						"take",
 						"diagnosis",
-						"update",
 						":id"
 					],
 					"query": [
 						{
 							"key": "note",
-							"value": ""
+							"value": "Lorem ipsum dolor sit amet"
 						},
 						{
 							"key": "diseaseId",
-							"value": ""
+							"value": "0"
 						},
 						{
 							"key": "visitId",
-							"value": ""
+							"value": "0"
 						}
 					],
 					"variable": [
 						{
 							"key": "id",
-							"value": ""
+							"value": "0"
 						}
 					]
 				}

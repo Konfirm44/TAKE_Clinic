@@ -32,14 +32,14 @@ public class DiagnosisREST implements DiagnosisRestModel {
 
     @Override
     @POST
-    @Path("/")
+    @Path("/object")
     public CreationStatus createPersist(Diagnosis diagnosis) {
         return bean.createPersist(diagnosis);
     }
 
     @Override
     @POST
-    @Path("/create")
+    @Path("/")
     public CreationStatus create(@QueryParam("note") String note, @QueryParam("diseaseId") Long diseaseId, @QueryParam("visitId") Long visitId) {
         return bean.create(note, diseaseId, visitId);
     }
@@ -54,7 +54,7 @@ public class DiagnosisREST implements DiagnosisRestModel {
 
     @Override
     @PUT
-    @Path("/update/{id}")
+    @Path("/{id}")
     public CreationStatus update(@PathParam("id") Long id, @QueryParam("note") String note, @QueryParam("diseaseId") Long diseaseId, @QueryParam("visitId") Long visitId) {
         System.out.println("Updating diagnosis endpoint reached...");
 

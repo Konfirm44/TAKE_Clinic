@@ -32,14 +32,14 @@ public class DiseaseREST implements DiseaseRestModel {
 
     @Override
     @POST
-    @Path("/")
+    @Path("/object")
     public CreationStatus createPersist(Disease disease) {
         return bean.createPersist(disease);
     }
 
     @Override
     @POST
-    @Path("/create")
+    @Path("/")
     public CreationStatus create(@QueryParam("contagious") String contagious, @QueryParam("name") String name) {
         return bean.create(contagious, name);
     }
@@ -53,7 +53,7 @@ public class DiseaseREST implements DiseaseRestModel {
 
     @Override
     @PUT
-    @Path("/update/{id}")
+    @Path("/{id}")
     public CreationStatus update(@PathParam("id") Integer id, @QueryParam("contagious") String contagious, @QueryParam("name") String name) {
         return bean.update(id, contagious, name);
     }

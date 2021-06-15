@@ -2,7 +2,6 @@ package pl.take.clinic.rest;
 
 import pl.take.clinic.model.CreationStatus;
 import pl.take.clinic.model.Visit;
-import pl.take.clinic.model.VisitStatus;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -20,11 +19,11 @@ public interface VisitRestModel {
     Visit getById (Long id);
 
     @POST
-    @Path("/")
+    @Path("/object")
     CreationStatus createPersist(Visit visit);
 
     @POST
-    @Path("/create")
+    @Path("/")
     CreationStatus create(String note, Integer status, Long doctorId, Long patientId);
 
     @PUT
@@ -32,6 +31,6 @@ public interface VisitRestModel {
     CreationStatus updateMerge(Visit visit);
 
     @PUT
-    @Path("/update/{id}")
+    @Path("/{id}")
     CreationStatus update(Long id, String note, Integer status, Long doctorId, Long patientId);
 }

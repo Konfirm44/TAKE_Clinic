@@ -26,11 +26,11 @@ public interface PatientRestModel {
     List<Visit> getVisits(Long id);
 
     @POST
-    @Path("/")
+    @Path("/object")
     CreationStatus createPersist(Patient person);
 
     @POST
-    @Path("/create")
+    @Path("/")
     CreationStatus create(String firstName, String lastName, String speciality);
 
     @PUT
@@ -38,6 +38,6 @@ public interface PatientRestModel {
     CreationStatus updateMerge(Patient person);
 
     @PUT
-    @Path("/update/{id}")
+    @Path("/{id}")
     CreationStatus update(Long id, String firstName, String lastName, String speciality);
 }

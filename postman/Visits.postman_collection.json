@@ -58,7 +58,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/take/visits/create?note=&status=&doctorId=&patientId=",
+					"raw": "http://localhost:8080/take/visits/?note=Lorem ipsum dolor sit amet&status=0&doctorId=0&patientId=0",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -67,27 +67,27 @@
 					"path": [
 						"take",
 						"visits",
-						"create"
+						""
 					],
 					"query": [
 						{
 							"key": "note",
-							"value": "",
+							"value": "Lorem ipsum dolor sit amet",
 							"description": "String"
 						},
 						{
 							"key": "status",
-							"value": "",
+							"value": "0",
 							"description": "0 - Registered, 1 - Canceled, 2 - Done"
 						},
 						{
 							"key": "doctorId",
-							"value": "",
+							"value": "0",
 							"description": "Number"
 						},
 						{
 							"key": "patientId",
-							"value": "",
+							"value": "0",
 							"description": "Number"
 						}
 					]
@@ -101,7 +101,7 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/take/visits/update/:id?note=&status=&doctorId=&patientId=",
+					"raw": "http://localhost:8080/take/visits/:id?note=Lorem ipsum&status=2&doctorId=0&patientId=0",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -110,31 +110,35 @@
 					"path": [
 						"take",
 						"visits",
-						"update",
 						":id"
 					],
 					"query": [
 						{
 							"key": "note",
-							"value": ""
+							"value": "Lorem ipsum",
+							"description": "String"
 						},
 						{
 							"key": "status",
-							"value": ""
+							"value": "2",
+							"description": "0 - Registered, 1 - Canceled, 2 - Done"
 						},
 						{
 							"key": "doctorId",
-							"value": ""
+							"value": "0",
+							"description": "Number"
 						},
 						{
 							"key": "patientId",
-							"value": ""
+							"value": "0",
+							"description": "Number"
 						}
 					],
 					"variable": [
 						{
 							"key": "id",
-							"value": ""
+							"value": "0",
+							"description": "Visit id to update"
 						}
 					]
 				}

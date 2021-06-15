@@ -33,14 +33,14 @@ public class VisitREST implements VisitRestModel {
 
     @Override
     @POST
-    @Path("/")
+    @Path("/object")
     public CreationStatus createPersist(Visit visit) {
         return bean.createPersist(visit);
     }
 
     @Override
     @POST
-    @Path("/create")
+    @Path("/")
     public CreationStatus create(
             @QueryParam("note") String note,
             @QueryParam("status") Integer status,
@@ -65,7 +65,7 @@ public class VisitREST implements VisitRestModel {
 
     @Override
     @PUT
-    @Path("/update/{id}")
+    @Path("/{id}")
     public CreationStatus update(
             @QueryParam("id") Long id,
             @QueryParam("note") String note,
