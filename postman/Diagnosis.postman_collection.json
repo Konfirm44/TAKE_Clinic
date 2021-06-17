@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "37a67b7b-bff9-4d92-afd8-47b39202eaa5",
+		"name": "Diagnosis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/take/diagnosis",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"take",
+						"diagnosis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/take/diagnosis/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"take",
+						"diagnosis",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/take/diagnosis/?note=Lorem ipsum dolor sit amet&diseaseId=0&visitId=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"take",
+						"diagnosis",
+						""
+					],
+					"query": [
+						{
+							"key": "note",
+							"value": "Lorem ipsum dolor sit amet"
+						},
+						{
+							"key": "diseaseId",
+							"value": "0"
+						},
+						{
+							"key": "visitId",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/take/diagnosis/:id?note=Lorem ipsum dolor sit amet&diseaseId=0&visitId=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"take",
+						"diagnosis",
+						":id"
+					],
+					"query": [
+						{
+							"key": "note",
+							"value": "Lorem ipsum dolor sit amet"
+						},
+						{
+							"key": "diseaseId",
+							"value": "0"
+						},
+						{
+							"key": "visitId",
+							"value": "0"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

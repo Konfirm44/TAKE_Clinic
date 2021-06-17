@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "13435b97-5f4f-4f70-97a6-495cc85fabb2",
+		"name": "Doctors",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/take/doctors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"take",
+						"doctors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/take/doctors/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"take",
+						"doctors",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get visits by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/take/doctors/:id/visits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"take",
+						"doctors",
+						":id",
+						"visits"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/take/doctors/create?firstName=&lastName=&speciality=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"take",
+						"doctors",
+						"create"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "",
+							"description": "String"
+						},
+						{
+							"key": "lastName",
+							"value": "",
+							"description": "String"
+						},
+						{
+							"key": "speciality",
+							"value": "",
+							"description": "String "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/take/doctors/update/:id?firstName=&lastName=&speciality=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"take",
+						"doctors",
+						"update",
+						":id"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "",
+							"description": "String"
+						},
+						{
+							"key": "lastName",
+							"value": "",
+							"description": "String"
+						},
+						{
+							"key": "speciality",
+							"value": "",
+							"description": "String "
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

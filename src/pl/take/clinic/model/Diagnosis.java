@@ -5,10 +5,10 @@ import javax.persistence.*;
 @Entity
 public class Diagnosis {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
 
-	@Column(length = 255)
+	@Column()
 	private String note;
 
 	@ManyToOne

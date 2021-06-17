@@ -6,11 +6,12 @@ import javax.persistence.*;
 
 @Entity
 public class Disease {
+	@Column(nullable = false)
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@Column(length = 255, nullable = false)
+	@Column(nullable = false)
 	private String name;
 	
 	@Column(nullable = false)

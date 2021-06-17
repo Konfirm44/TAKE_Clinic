@@ -1,5 +1,6 @@
 package pl.take.clinic.ejb;
 
+import pl.take.clinic.model.CreationStatus;
 import pl.take.clinic.model.Patient;
 import pl.take.clinic.model.Visit;
 
@@ -15,8 +16,7 @@ public class PatientEJB {
     @PersistenceContext(name="clinic")
     EntityManager entityManager;
 
-    public void create(Patient patient) {
-        System.out.println("Creating a patient!");
+    public void createPersist(Patient patient) {
         entityManager.persist(patient);
     }
 
@@ -49,7 +49,48 @@ public class PatientEJB {
         return new ArrayList<>(find(id).getVisits());
     }
 
-    public void update(Patient patient) {
+    public void updateMerge(Patient patient) {
         patient = entityManager.merge(patient);
+    }
+
+    public CreationStatus create(String firstName, String lastName, String pesel) {
+        try {
+            String sqlQuery = "INSERT INTO Patient (firstName, lastName, pesel) VALUES (?, ?, ?);";
+
+            int nativeQuery = entityManager.createNativeQuery(sqlQuery)
+                    .setParameter(1, firstName)
+                    .setParameter(2, lastName)
+                    .setParameter(3, pesel)
+                    .executeUpdate();
+
+            if (nativeQuery == 1) {
+                return CreationStatus.Success;
+            }
+        } catch (Exception err) {
+            return CreationStatus.Failed;
+        }
+
+        return CreationStatus.Failed;
+    }
+
+    public CreationStatus update(Long id, String firstName, String lastName, String pesel) {
+        try {
+            String sqlQuery = "UPDATE Patient SET firstName=?, lastName=?, pesel=? WHERE id=?;";
+
+            int nativeQuery = entityManager.createNativeQuery(sqlQuery)
+                    .setParameter(1, firstName)
+                    .setParameter(2, lastName)
+                    .setParameter(3, pesel)
+                    .setParameter(4, id)
+                    .executeUpdate();
+
+            if (nativeQuery == 1) {
+                return CreationStatus.Success;
+            }
+        } catch (Exception err) {
+            return CreationStatus.Failed;
+        }
+
+        return CreationStatus.Failed;
     }
 }

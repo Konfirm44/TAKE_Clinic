@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "a0ea5d61-a5ef-499e-858b-5fe257e8fa73",
+		"name": "Visits",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/take/visits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"take",
+						"visits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/take/visits/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"take",
+						"visits",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/take/visits/?note=Lorem ipsum dolor sit amet&status=0&doctorId=0&patientId=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"take",
+						"visits",
+						""
+					],
+					"query": [
+						{
+							"key": "note",
+							"value": "Lorem ipsum dolor sit amet",
+							"description": "String"
+						},
+						{
+							"key": "status",
+							"value": "0",
+							"description": "0 - Registered, 1 - Canceled, 2 - Done"
+						},
+						{
+							"key": "doctorId",
+							"value": "0",
+							"description": "Number"
+						},
+						{
+							"key": "patientId",
+							"value": "0",
+							"description": "Number"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/take/visits/:id?note=Lorem ipsum&status=2&doctorId=0&patientId=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"take",
+						"visits",
+						":id"
+					],
+					"query": [
+						{
+							"key": "note",
+							"value": "Lorem ipsum",
+							"description": "String"
+						},
+						{
+							"key": "status",
+							"value": "2",
+							"description": "0 - Registered, 1 - Canceled, 2 - Done"
+						},
+						{
+							"key": "doctorId",
+							"value": "0",
+							"description": "Number"
+						},
+						{
+							"key": "patientId",
+							"value": "0",
+							"description": "Number"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "0",
+							"description": "Visit id to update"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
