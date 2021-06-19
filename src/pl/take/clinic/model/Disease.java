@@ -16,10 +16,7 @@ public class Disease {
 	
 	@Column(nullable = false)
 	private char contagious;
-	
-	@OneToMany(mappedBy = "disease", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	private List<Diagnosis> diagnoses;
-	
+
 	public Disease() {}
 	
 	public int getId() {
@@ -44,15 +41,5 @@ public class Disease {
 	
 	public void setContagious(char newContagious) {
 		contagious = newContagious;
-	}
-	
-	public List<Diagnosis> getDiagnoses()
-	{
-		return diagnoses;
-	}
-	
-	public void setDiagnoses(List<Diagnosis> newDiagnoses)
-	{
-		diagnoses = newDiagnoses;
 	}
 }
