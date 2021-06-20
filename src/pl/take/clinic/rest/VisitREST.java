@@ -67,12 +67,22 @@ public class VisitREST implements VisitRestModel {
     @PUT
     @Path("/{id}")
     public CreationStatus update(
-            @QueryParam("id") Long id,
+            @PathParam("id") Long id,
             @QueryParam("note") String note,
             @QueryParam("status") Integer status,
             @QueryParam("doctorId") Long doctorId,
             @QueryParam("patientId") Long patientId
     ) {
         return bean.update(id, note, status, doctorId, patientId);
+    }
+
+    @Override
+    @PUT
+    @Path("/{id}/status")
+    public CreationStatus updateStatus(
+            @PathParam("id") Long id,
+            @QueryParam("status") Integer status
+    ) {
+        return bean.updateStatus(id, status);
     }
 }

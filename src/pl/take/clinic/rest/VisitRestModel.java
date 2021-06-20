@@ -33,4 +33,8 @@ public interface VisitRestModel {
     @PUT
     @Path("/{id}")
     CreationStatus update(Long id, String note, Integer status, Long doctorId, Long patientId);
+
+    @PUT
+    @Path("/{id}/status")
+    CreationStatus updateStatus(Long id, Integer status);
 }

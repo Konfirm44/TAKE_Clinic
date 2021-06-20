@@ -79,6 +79,30 @@ public class VisitsEJB {
         return CreationStatus.Failed;
     }
 
+    public CreationStatus updateStatus(Long id, Integer status) {
+        try {
+            String sqlQuery = "UPDATE Visit SET status=? WHERE id=?;";
+
+            System.out.println(status);
+            System.out.println(id);
+
+            int nativeQuery = entityManager.createNativeQuery(sqlQuery)
+                    .setParameter(1, status)
+                    .setParameter(2, id)
+                    .executeUpdate();
+
+            System.out.println(nativeQuery);
+
+            if (nativeQuery == 1) {
+                return CreationStatus.Success;
+            }
+        } catch (Exception err) {
+            return CreationStatus.Failed;
+        }
+
+        return CreationStatus.Failed;
+    }
+
     public CreationStatus createPersist(Visit visit) {
         try {
             entityManager.persist(visit);
