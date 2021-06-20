@@ -7,6 +7,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.core.Response;
 import java.util.List;
 
 public interface VisitRestModel {
@@ -19,22 +20,14 @@ public interface VisitRestModel {
     Visit getById (Long id);
 
     @POST
-    @Path("/object")
-    CreationStatus createPersist(Visit visit);
-
-    @POST
     @Path("/")
-    CreationStatus create(String note, Integer status, Long doctorId, Long patientId);
-
-    @PUT
-    @Path("/")
-    CreationStatus updateMerge(Visit visit);
+    Response create(String note, Integer status, Long doctorId, Long patientId);
 
     @PUT
     @Path("/{id}")
-    CreationStatus update(Long id, String note, Integer status, Long doctorId, Long patientId);
+    Response update(Long id, String note, Integer status, Long doctorId, Long patientId);
 
     @PUT
     @Path("/{id}/status")
-    CreationStatus updateStatus(Long id, Integer status);
+    Response updateStatus(Long id, Integer status);
 }

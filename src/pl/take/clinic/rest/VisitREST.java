@@ -3,11 +3,11 @@ package pl.take.clinic.rest;
 import pl.take.clinic.ejb.VisitsEJB;
 import pl.take.clinic.model.CreationStatus;
 import pl.take.clinic.model.Visit;
-import pl.take.clinic.model.VisitStatus;
 
 import javax.ejb.EJB;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Path("/visits")
@@ -33,56 +33,60 @@ public class VisitREST implements VisitRestModel {
 
     @Override
     @POST
-    @Path("/object")
-    public CreationStatus createPersist(Visit visit) {
-        return bean.createPersist(visit);
-    }
-
-    @Override
-    @POST
     @Path("/")
-    public CreationStatus create(
+    public Response create(
             @QueryParam("note") String note,
             @QueryParam("status") Integer status,
             @QueryParam("doctorId") Long doctorId,
             @QueryParam("patientId") Long patientId
     ) {
-        System.out.println("Creating visit initialising...");
-        System.out.println(note);
-        System.out.println(status);
-        System.out.println(doctorId);
-        System.out.println(patientId);
+        CreationStatus response = bean.create(note, status, doctorId, patientId);
 
-        return bean.create(note, status, doctorId, patientId);
-    }
-
-    @Override
-    @PUT
-    @Path("/")
-    public CreationStatus updateMerge(Visit visit) {
-        return bean.updateMerge(visit);
+        switch (response) {
+            case Success:
+                String json = " { \"status\": " + response + " } ";
+                return Response.ok(json, MediaType.APPLICATION_JSON).build();
+            default:
+                return Response.serverError().entity("Received status: " + response).build();
+        }
     }
 
     @Override
     @PUT
     @Path("/{id}")
-    public CreationStatus update(
+    public Response update(
             @PathParam("id") Long id,
             @QueryParam("note") String note,
             @QueryParam("status") Integer status,
             @QueryParam("doctorId") Long doctorId,
             @QueryParam("patientId") Long patientId
     ) {
-        return bean.update(id, note, status, doctorId, patientId);
+        CreationStatus response = bean.update(id, note, status, doctorId, patientId);
+
+        switch (response) {
+            case Success:
+                String json = " { \"status\": " + response + " } ";
+                return Response.ok(json, MediaType.APPLICATION_JSON).build();
+            default:
+                return Response.serverError().entity("Received status: " + response).build();
+        }
     }
 
     @Override
     @PUT
     @Path("/{id}/status")
-    public CreationStatus updateStatus(
+    public Response updateStatus(
             @PathParam("id") Long id,
             @QueryParam("status") Integer status
     ) {
-        return bean.updateStatus(id, status);
+        CreationStatus response = bean.updateStatus(id, status);
+
+        switch (response) {
+            case Success:
+                String json = " { \"status\": " + response + " } ";
+                return Response.ok(json, MediaType.APPLICATION_JSON).build();
+            default:
+                return Response.serverError().entity("Received status: " + response).build();
+        }
     }
 }

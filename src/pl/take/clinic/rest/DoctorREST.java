@@ -8,6 +8,7 @@ import pl.take.clinic.model.Visit;
 import javax.ejb.EJB;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Path("/doctors")
@@ -44,40 +45,31 @@ public class DoctorREST implements DoctorRestModel {
 
     @Override
     @POST
-    @Path("/object")
-    public CreationStatus createPersist(Doctor doctor) {
-        try {
-            bean.createPersist(doctor);
-
-            return CreationStatus.Success;
-        } catch (Exception err) {
-            return CreationStatus.Failed;
-        }
-    }
-
-    @Override
-    @POST
     @Path("/")
-    public CreationStatus create(@QueryParam("firstName") String firstName, @QueryParam("lastName") String lastName, @QueryParam("speciality") String speciality) {
-        return bean.create(firstName, lastName, speciality);
-    }
+    public Response create(@QueryParam("firstName") String firstName, @QueryParam("lastName") String lastName, @QueryParam("speciality") String speciality) {
+        CreationStatus response = bean.create(firstName, lastName, speciality);
 
-    @Override
-    @PUT
-    @Path("/")
-    public CreationStatus updateMerge(Doctor doctor) {
-        try {
-            bean.updateMerge(doctor);
-            return CreationStatus.Success;
-        } catch (Exception err) {
-            return CreationStatus.Failed;
+        switch (response) {
+            case Success:
+                String json = " { \"status\": " + response + " } ";
+                return Response.ok(json, MediaType.APPLICATION_JSON).build();
+            default:
+                return Response.serverError().entity("Received status: " + response).build();
         }
     }
 
     @Override
     @PUT
     @Path("/{id}")
-    public CreationStatus update(@PathParam("id") Long id, @QueryParam("firstName") String firstName, @QueryParam("lastName") String lastName, @QueryParam("speciality") String speciality) {
-        return bean.update(id, firstName, lastName, speciality);
+    public Response update(@PathParam("id") Long id, @QueryParam("firstName") String firstName, @QueryParam("lastName") String lastName, @QueryParam("speciality") String speciality) {
+        CreationStatus response = bean.update(id, firstName, lastName, speciality);
+
+        switch (response) {
+            case Success:
+                String json = " { \"status\": " + response + " } ";
+                return Response.ok(json, MediaType.APPLICATION_JSON).build();
+            default:
+                return Response.serverError().entity("Received status: " + response).build();
+        }
     }
 }

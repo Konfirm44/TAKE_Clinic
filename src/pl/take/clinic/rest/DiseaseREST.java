@@ -7,6 +7,7 @@ import pl.take.clinic.model.Disease;
 import javax.ejb.EJB;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Path("/diseases")
@@ -32,29 +33,31 @@ public class DiseaseREST implements DiseaseRestModel {
 
     @Override
     @POST
-    @Path("/object")
-    public CreationStatus createPersist(Disease disease) {
-        return bean.createPersist(disease);
-    }
-
-    @Override
-    @POST
     @Path("/")
-    public CreationStatus create(@QueryParam("contagious") String contagious, @QueryParam("name") String name) {
-        return bean.create(contagious, name);
-    }
+    public Response create(@QueryParam("contagious") String contagious, @QueryParam("name") String name) {
+        CreationStatus response = bean.create(contagious, name);
 
-    @Override
-    @PUT
-    @Path("/")
-    public CreationStatus updateMerge(Disease disease) {
-        return bean.updateMerge(disease);
+        switch (response) {
+            case Success:
+                String json = " { \"status\": " + response + " } ";
+                return Response.ok(json, MediaType.APPLICATION_JSON).build();
+            default:
+                return Response.serverError().entity("Received status: " + response).build();
+        }
     }
 
     @Override
     @PUT
     @Path("/{id}")
-    public CreationStatus update(@PathParam("id") Integer id, @QueryParam("contagious") String contagious, @QueryParam("name") String name) {
-        return bean.update(id, contagious, name);
+    public Response update(@PathParam("id") Integer id, @QueryParam("contagious") String contagious, @QueryParam("name") String name) {
+        CreationStatus response = bean.update(id, contagious, name);
+
+        switch (response) {
+            case Success:
+                String json = " { \"status\": " + response + " } ";
+                return Response.ok(json, MediaType.APPLICATION_JSON).build();
+            default:
+                return Response.serverError().entity("Received status: " + response).build();
+        }
     }
 }

@@ -1,8 +1,6 @@
 package pl.take.clinic.rest;
 
 
-import pl.take.clinic.model.CreationStatus;
-import pl.take.clinic.model.Doctor;
 import pl.take.clinic.model.Patient;
 import pl.take.clinic.model.Visit;
 
@@ -10,6 +8,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.core.Response;
 import java.util.List;
 
 public interface PatientRestModel {
@@ -26,18 +25,10 @@ public interface PatientRestModel {
     List<Visit> getVisits(Long id);
 
     @POST
-    @Path("/object")
-    CreationStatus createPersist(Patient person);
-
-    @POST
     @Path("/")
-    CreationStatus create(String firstName, String lastName, String speciality);
-
-    @PUT
-    @Path("/")
-    CreationStatus updateMerge(Patient person);
+    Response create(String firstName, String lastName, String speciality);
 
     @PUT
     @Path("/{id}")
-    CreationStatus update(Long id, String firstName, String lastName, String speciality);
+    Response update(Long id, String firstName, String lastName, String speciality);
 }

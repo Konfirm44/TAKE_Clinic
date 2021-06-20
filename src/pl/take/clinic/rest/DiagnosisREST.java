@@ -7,6 +7,7 @@ import pl.take.clinic.model.Diagnosis;
 import javax.ejb.EJB;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Path("/diagnosis")
@@ -32,32 +33,31 @@ public class DiagnosisREST implements DiagnosisRestModel {
 
     @Override
     @POST
-    @Path("/object")
-    public CreationStatus createPersist(Diagnosis diagnosis) {
-        return bean.createPersist(diagnosis);
-    }
-
-    @Override
-    @POST
     @Path("/")
-    public CreationStatus create(@QueryParam("note") String note, @QueryParam("diseaseId") Long diseaseId, @QueryParam("visitId") Long visitId) {
-        return bean.create(note, diseaseId, visitId);
-    }
+    public Response create(@QueryParam("note") String note, @QueryParam("diseaseId") Long diseaseId, @QueryParam("visitId") Long visitId) {
+        CreationStatus response = bean.create(note, diseaseId, visitId);
 
-    @Override
-    @PUT
-    @Path("/")
-    public CreationStatus updateMerge(Diagnosis diagnosis) {
-        return bean.updateMerge(diagnosis);
+        switch (response) {
+            case Success:
+                String json = " { \"status\": " + response + " } ";
+                return Response.ok(json, MediaType.APPLICATION_JSON).build();
+            default:
+                return Response.serverError().entity("Received status: " + response).build();
+        }
     }
-
 
     @Override
     @PUT
     @Path("/{id}")
-    public CreationStatus update(@PathParam("id") Long id, @QueryParam("note") String note, @QueryParam("diseaseId") Long diseaseId, @QueryParam("visitId") Long visitId) {
-        System.out.println("Updating diagnosis endpoint reached...");
+    public Response update(@PathParam("id") Long id, @QueryParam("note") String note, @QueryParam("diseaseId") Long diseaseId, @QueryParam("visitId") Long visitId) {
+        CreationStatus response = bean.update(id, note, diseaseId, visitId);
 
-        return bean.update(id, note, diseaseId, visitId);
+        switch (response) {
+            case Success:
+                String json = " { \"status\": " + response + " } ";
+                return Response.ok(json, MediaType.APPLICATION_JSON).build();
+            default:
+                return Response.serverError().entity("Received status: " + response).build();
+        }
     }
 }
