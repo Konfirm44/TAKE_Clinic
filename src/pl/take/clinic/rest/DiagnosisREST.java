@@ -54,7 +54,7 @@ public class DiagnosisREST implements DiagnosisRestModel {
 
         switch (response) {
             case Success:
-                String json = " { \"status\": " + response + " } ";
+                String json = " { \"status\": \"" + response + "\" } ";
                 return Response.ok(json, MediaType.APPLICATION_JSON).build();
             default:
                 return Response.serverError().entity("Received status: " + response).build();
