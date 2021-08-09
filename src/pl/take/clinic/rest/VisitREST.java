@@ -38,9 +38,10 @@ public class VisitREST implements VisitRestModel {
             @QueryParam("note") String note,
             @QueryParam("status") Integer status,
             @QueryParam("doctorId") Long doctorId,
-            @QueryParam("patientId") Long patientId
+            @QueryParam("patientId") Long patientId,
+            @QueryParam("timestamp") String timestamp
     ) {
-        CreationStatus response = bean.create(note, status, doctorId, patientId);
+        CreationStatus response = bean.create(note, status, doctorId, patientId, timestamp);
 
         switch (response) {
             case Success:
@@ -59,9 +60,10 @@ public class VisitREST implements VisitRestModel {
             @QueryParam("note") String note,
             @QueryParam("status") Integer status,
             @QueryParam("doctorId") Long doctorId,
-            @QueryParam("patientId") Long patientId
+            @QueryParam("patientId") Long patientId,
+            @QueryParam("timestamp") String timestamp
     ) {
-        CreationStatus response = bean.update(id, note, status, doctorId, patientId);
+        CreationStatus response = bean.update(id, note, status, doctorId, patientId, timestamp);
 
         switch (response) {
             case Success:

@@ -21,11 +21,11 @@ public interface VisitRestModel {
 
     @POST
     @Path("/")
-    Response create(String note, Integer status, Long doctorId, Long patientId);
+    Response create(String note, Integer status, Long doctorId, Long patientId, String timestamp);
 
     @PUT
     @Path("/{id}")
-    Response update(Long id, String note, Integer status, Long doctorId, Long patientId);
+    Response update(Long id, String note, Integer status, Long doctorId, Long patientId, String timestamp);
 
     @PUT
     @Path("/{id}/status")

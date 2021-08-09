@@ -30,17 +30,18 @@ public class VisitsEJB {
     // INSERT INTO `clinic`.`visit` (`note`, `status`, `doctor_id`, `patient_id`) VALUES ('?', 0, 0, 0);
     // INSERT INTO `clinic`.`visit` (`note`, `status`, `doctor_id`, `patient_id`) VALUES ('NOTE', 0, 0, 0);
 
-    public CreationStatus create(String note, Integer status, Long doctorId, Long patientId) {
+    public CreationStatus create(String note, Integer status, Long doctorId, Long patientId, String timestamp) {
         System.out.println("Creating visit...");
 
         try {
-            String sqlQuery = "INSERT INTO Visit (note, status, doctor_id, patient_id) VALUES (?, ?, ?, ?);";
+            String sqlQuery = "INSERT INTO Visit (note, status, doctor_id, patient_id, date) VALUES (?, ?, ?, ?, ?);";
 
             int nativeQuery = entityManager.createNativeQuery(sqlQuery)
                     .setParameter(1, note)
                     .setParameter(2, status)
                     .setParameter(3, doctorId)
                     .setParameter(4, patientId)
+                    .setParameter(5, timestamp)
                     .executeUpdate();
 
             System.out.println("Creating visit native query response...");
@@ -57,16 +58,17 @@ public class VisitsEJB {
         return CreationStatus.Failed;
     }
 
-    public CreationStatus update(Long id, String note, Integer status, Long doctorId, Long patientId) {
+    public CreationStatus update(Long id, String note, Integer status, Long doctorId, Long patientId, String timestamp) {
         try {
-            String sqlQuery = "UPDATE Visit SET note=?, status=?, doctor_id=?, patient_id=? WHERE id=?;";
+            String sqlQuery = "UPDATE Visit SET note=?, status=?, doctor_id=?, patient_id=?, date=? WHERE id=?;";
 
             int nativeQuery = entityManager.createNativeQuery(sqlQuery)
                     .setParameter(1, note)
                     .setParameter(2, status)
                     .setParameter(3, doctorId)
                     .setParameter(4, patientId)
-                    .setParameter(5, id)
+                    .setParameter(5, timestamp)
+                    .setParameter(6, id)
                     .executeUpdate();
 
             if (nativeQuery == 1) {
